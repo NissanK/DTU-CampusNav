@@ -1,0 +1,21 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /* font-family: "Source Sans Pro", sans-serif; */
+}
+
+body{
+    background-color: #112D4E;
+    font-family: 'Play', sans-serif;
+}
+
+.gradient-hotspot{
+    /* background: linear-gradient(180deg, #AFB1E3 20%, #4da8dc 100%); */
+    background: linear-gradient(180deg, #C9E7E9 0%, #AFB1E3 0.01%, #51AADC 100%);
+    filter: brightness(120%);
+}
