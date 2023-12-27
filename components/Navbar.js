@@ -8,7 +8,6 @@ function Navbar() {
 
     function setSearchData(event){
         setSearchInput(event.target.value);
-        console.log(searchInput);
     }
 
     return (
@@ -16,7 +15,8 @@ function Navbar() {
             rounded-[30px] opacity-80 sticky top-0 z-10'>
             <div className="h-[3.75rem] w-full rounded-[27px] flex items-center">
                 <FontAwesomeIcon icon={faMagnifyingGlass} className="mx-[0.88rem] w-6 h-6 text-lightest-blue"></FontAwesomeIcon>
-                <input type="text" onChange={setSearchData} className="border-none bg-lightest-blue/50 w-full h-[3.75rem] rounded-[27px] px-4 text-2xl select-none">
+                <input type="text" onChange={setSearchData} placeholder='Enter the location you want to look for here'
+                className="border-none bg-lightest-blue/50 w-full h-[3.75rem] rounded-[27px] px-4 text-2xl select-none">
                 </input>
             </div>
         </div>
