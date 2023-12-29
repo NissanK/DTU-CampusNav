@@ -19,3 +19,8 @@ body{
     background: linear-gradient(180deg, #C9E7E9 0%, #AFB1E3 0.01%, #51AADC 100%);
     filter: brightness(120%);
 }
+
+.gradient-google-maps{
+    background: linear-gradient(180deg, #7AACFF 0%, #1A73E8 100%);
+    filter: brightness(110%);
+}
