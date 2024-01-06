@@ -21,8 +21,8 @@ function SearchBar() {
                 px-5 rounded-[0.625rem] py-[0.35rem]'>Search</button>
 
                 <input type="text" onChange={setSearchData} placeholder='Search your location'
-                className="border-bright-blue border-[1px] bg-lightest-blue/50
-                 w-full h-[3.75rem] rounded-[0.625rem] pr-4 pl-[2.75rem] text-lg md:text-xl select-none">
+                    className="border-bright-blue border-[1px] bg-lightest-blue/50
+                    w-full h-[3.75rem] rounded-[0.625rem] pr-4 pl-[2.75rem] text-lg md:text-xl select-none">
                 </input>
             </div>
         </div>

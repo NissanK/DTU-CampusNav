@@ -14,6 +14,7 @@ module.exports = {
         'light-blue' : '#73A8E7',
         'off-blue' : '#81A3CB',
         'bright-blue' : '#488EF0',
+        'icon-blue' : '#A6C4E5'
       },
     },
   },

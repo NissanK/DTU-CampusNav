@@ -6,7 +6,7 @@ function NewMainPageDiv() {
   return (
 
     <div className=' relative inline-block'>
-        <img src="/images/dtu3.jpg" alt="DTU" class="block w-full h-auto"></img>
+        <img src="/images/dtu5.jpg" alt="DTU" class="block w-full h-auto"></img>
         <div class="absolute top-0 left-0 w-full h-full bg-lightest-blue bg-opacity-[85%] ">
             <div className='my-[5rem] flex mx-[4rem] h-[70%] justify-between'>
                 <div className='flex flex-col justify-between w-1/2'>
@@ -20,7 +20,7 @@ function NewMainPageDiv() {
 
                     <NewNavbar></NewNavbar>
 
-                    <div className='flex justify-between'>
+                    <div className='flex justify-around'>
                         <div className='flex flex-col'>
                             <div className='text-4xl text-bright-blue'>100<span className='text-background-blue'>+</span></div>
                             <div className='text-xl'>Locations</div>
@@ -29,14 +29,10 @@ function NewMainPageDiv() {
                             <div className='text-4xl text-bright-blue'>100<span className='text-background-blue'>+</span></div>
                             <div className='text-xl'>Visitors</div>
                         </div>
-                        <div className='flex flex-col'>
-                            <div className='text-4xl text-bright-blue'>100<span className='text-background-blue'>+</span></div>
-                            <div className='text-xl'>Locations</div>
-                        </div>
                     </div>
 
                 </div>
-                <img src='/images/navigationMapFront.png'></img>
+                <img src='/images/navigationMapFront.png' className=''></img>
             </div>
         </div>
     </div>
