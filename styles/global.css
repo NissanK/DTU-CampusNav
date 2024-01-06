@@ -16,7 +16,14 @@ body{
 
 .gradient-hotspot{
     /* background: linear-gradient(180deg, #AFB1E3 20%, #4da8dc 100%); */
-    background: linear-gradient(180deg, #C9E7E9 0%, #AFB1E3 0.01%, #51AADC 100%);
+    background: linear-gradient(180deg, #AFB1E3 0.01%, #51AADC 100%);
+    filter: brightness(120%);
+}
+
+.gradient-hotspot2{
+    /* background: linear-gradient(180deg, #AFB1E3 20%, #4da8dc 100%); */
+    background: linear-gradient(180deg, #51AADC 0.01%,  #AFB1E3 100%);
+
     filter: brightness(120%);
 }
 

@@ -39,18 +39,33 @@ const navigationItems = [
     { id: 21, name: "Amul" },
     { id: 22, name: "OAT" }
   ]},
+
   { id: 3, name: "Departments",
     parent: 1,
-    location : null,
+    location : null,  // location needed
     description : null,
     nestedList : [
-    { id: 23, name: "Computer Engineering" },
-    { id: 24, name: "Information Technology" },
-    { id: 25, name: "Software Engineering" },
-    { id: 26, name: "Mathematics and Computing Engineering" }
-  ]},
+      { id: 23, name: "Computer Engineering" },
+      { id: 24, name: "Information Technology" },
+      { id: 25, name: "Software Engineering" },
+      { id: 26, name: "Mathematics and Computing Engineering" }
+    ]
+  },
 
-  { id: 4, name: "React.js",parent : 1, location : {latitude : 28.7449517, longitude : 77.1177903}, description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
+  { 
+    id: 4,  // unique numebr
+    name: "React.js", // unqiue, string
+    parent : 1, // unique number
+
+    location :{
+      latitude : 28.7449517, // float/number
+      longitude : 77.1177903
+    },
+
+    description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], // array of strings
+    nestedList : [] // nested objects
+  },
+
   { id: 5, name: "Next.js",parent : 1, location : {latitude : 28.7449517, longitude : 77.1177903}, description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
   { id: 6, name: "Node.js",parent : 1, location : {latitude : 28.7449517, longitude : 77.1177903}, description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
   { id: 7, name: "Express.js",parent : 1, location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
@@ -83,11 +98,11 @@ function MainPageDiv() {
   }
 
   return (
-    <div className='flex mx-[5rem] my-3 justify-start flex-col px-5 py-5
+    <div className='flex md:mx-[5rem] mx-[1rem] my-3 justify-start flex-col
       rounded-[30px] bg-off-blue opacity-80'>
-      <div className="flex justify-between mx-8 flex-col">
+      <div className="flex justify-between mx-4 md:mx-8 flex-col">
 
-        <div className=" text-background-blue text-4xl mt-8 flex items-center">
+        <div className=" text-background-blue text-3xl md:text-4xl mt-4 md:mt-8 flex items-center">
           {currentItemID !== 1 ? 
             <FontAwesomeIcon icon={faArrowLeft} className="cursor-pointer absolute" onClick={handleBackClick}/> 
             : null
@@ -98,17 +113,17 @@ function MainPageDiv() {
         </div>
         
         {navigationItems[currentItemID-1].location === null ? 
-        <div className="flex justify-between flex-wrap mt-12">
-          <NavigationContext.Provider value={[currentItemID,setCurrentItemID]}>
-          {
-            navigationItems[currentItemID-1].nestedList.map(currItem => (
-              <SelectionButton item = {currItem} key = {currItem.id}></SelectionButton>
-            ))
-          }
-          </NavigationContext.Provider>
-        </div> 
-        :
-          <LocationDesc item = {navigationItems[currentItemID-1]}></LocationDesc>
+          <div className="flex justify-evenly flex-wrap mt-9 md:mt-12">
+            <NavigationContext.Provider value={[currentItemID,setCurrentItemID]}>
+            {
+              navigationItems[currentItemID-1].nestedList.map(currItem => (
+                <SelectionButton item = {currItem} key = {currItem.id}></SelectionButton>
+              ))
+            }
+            </NavigationContext.Provider>
+          </div> 
+          :
+            <LocationDesc item = {navigationItems[currentItemID-1]}></LocationDesc>
         }
         
       </div>
