@@ -32,7 +32,7 @@ function NewMainPageDiv() {
                     </div>
 
                 </div>
-                <img src='/images/navigationMapFront.png' className=''></img>
+                <img src='/images/navigationMapFront.png' className='h-4/5 self-center'></img>
             </div>
         </div>
     </div>

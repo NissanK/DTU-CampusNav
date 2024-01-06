@@ -7,7 +7,7 @@ function LocationDesc({item}) {
         <div className='flex mt-8 flex-col'>
           {item.description.map(currItem => (
             <div className='flex items-center text-center
-            justify-center text-background-blue text-2xl md:text-4xl'>
+            justify-center text-background-blue text-xl md:text-2xl'>
               {currItem}
             </div>
           ))}
