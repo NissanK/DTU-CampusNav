@@ -1,25 +1,32 @@
 import Image from 'next/image'
 import React from 'react'
 
+import ClickCountLarge from './ClickCountLarge'
+import MapsButton from './MapsButton'
+
 function LocationDesc({item}) {
   return (
-    <div className='flex items-center flex-col'>
-        <div className='flex mt-8 flex-col'>
-          {item.description.map(currItem => (
-            <div className='flex items-center text-center
-            justify-center text-background-blue text-xl md:text-2xl'>
+    <div className='flex justify-between my-8'>
+        <div className='flex flex-col text-background-blue justify-start w-1/2'>
+          <div className='mb-4 text-2xl md:text-3xl'>{item.name}</div>
+          {item.description.map((currItem,index) => (
+            <div className='text-xl md:text-2xl' key={index}>
               {currItem}
             </div>
           ))}
+          <div className='flex justify-between mt-8'>
+
+            <ClickCountLarge item = {item}></ClickCountLarge>
+
+            <MapsButton item = {item}></MapsButton>
+
+          </div>
         </div>
 
-        <a className='w-[9rem] h-[3rem] rounded-[0.6875rem] flex justify-evenly
-        items-center gradient-google-maps mb-12 text-[1rem] mr-2 cursor-pointer mt-8'
-        href={`https://www.google.com/maps/dir//${item.location.latitude},${item.location.longitude}`}
-        target={"_blank"} rel="noreferrer" >
-          <img src='/images/Google_Maps_icon.png' className="w-[1.3rem]"></img>
-          Open Maps
-        </a>
+        <div className='flex flex-col items-center w-1/2'>
+          <img src='./images/googleMapsPlaceholder.png' className=' w-2/3 rounded-2xl'></img>
+        </div>
+
     </div>
   )
 }

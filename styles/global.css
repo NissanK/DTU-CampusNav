@@ -31,3 +31,38 @@ body{
     background: linear-gradient(180deg, #7AACFF 0%, #1A73E8 100%);
     filter: brightness(110%);
 }
+
+ScrollBar Properties
+
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+      background-color: #73A8E7; /* Color of the track */
+    }
+    
+    ::-webkit-scrollbar-track {
+      background-color: #112D4E; /* Color of the thumb */
+  }
+  
+  /* For Firefox */
+  /* Note: Firefox supports scrollbar-color, so you can use that instead of the below styles */
+  /* However, some versions might still require the below styles */
+  * {
+    scrollbar-color: #73A8E7 #112D4E;
+  }
+  
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #73A8E7;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: #112D4E;
+  }
+  

@@ -57,8 +57,8 @@ const categoryItems = [
 function CategoryItemsRow() {
   return (
     <div className='flex items-center justify-around mx-5 my-10 flex-wrap'>
-        {categoryItems.map(currItem => (
-            <CategoryIcons category={currItem}></CategoryIcons>
+        {categoryItems.map((currItem,index) => (
+            <CategoryIcons category={currItem} key={index}></CategoryIcons>
         ))}
     </div>
   )

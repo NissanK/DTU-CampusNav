@@ -1,9 +1,12 @@
-import {React,useContext,useState} from "react";
+import {React,useContext,useState,useRef,useEffect} from "react";
 import SelectionButton from "./SelectionButton";
+import LocationDesc from "./LocationDesc";
+
 import NavigationContext from "./contexts/NavigationContext";
+import LocationSelectorHeightContext from "./contexts/LocationSelectorHeightContext";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
-import LocationDesc from "./LocationDesc";
 
 function MainPageDiv() {
   
@@ -13,13 +16,23 @@ function MainPageDiv() {
     setCurrentItemID(navigationItems[currentItemID-1].parent);
   }
 
+  const [locationSelectorHeight, setLocationSelectorHeight] = useContext(LocationSelectorHeightContext);
+
+  const LocationSelectorRef = useRef(null);
+
+  useEffect(() => {
+    setLocationSelectorHeight(LocationSelectorRef.current.clientHeight);
+  }, [currentItemID])
+
   return (
-    <div className='flex mx-[1rem] md:mx-[2rem] my-3 justify-start flex-col
-      rounded-[30px] bg-off-blue opacity-80'>
+    <div className='flex ml-[1rem] md:ml-[2rem] my-3 justify-start flex-col
+      rounded-[30px] bg-off-blue h-fit w-2/3' 
+      ref={LocationSelectorRef}
+      >
       <div className="flex justify-between mx-4 md:mx-8 flex-col">
 
         <div className=" text-background-blue text-2xl md:text-3xl mt-4 md:mt-8 flex items-center">
-          {currentItemID !== 1 ? 
+          {currentItemID !== navigationItems[currentItemID-1].superParent ? 
             <FontAwesomeIcon icon={faArrowLeft} className="cursor-pointer absolute" onClick={handleBackClick}/> 
             : null
           }

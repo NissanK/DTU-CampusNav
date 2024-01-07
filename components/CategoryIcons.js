@@ -14,8 +14,8 @@ function CategoryIcons({category}) {
         ${navigationItems[currentItemID-1].superParent == category.id ? `border-icon-blue border-2` : null}`}
         onClick={handleClick}>
             <img src={`./images/categoryIcons/${category.icon}.png`} className='w-[60%]  mb-2 mx-auto'></img>
-            {category.name.split(' ').map(currWord =>(
-                <div className='text-center text-icon-blue text-sm'>{currWord}</div>
+            {category.name.split(' ').map((currWord,index) =>(
+                <div className='text-center text-icon-blue text-sm' key={index}>{currWord}</div>
             ))}
         </div>
     )

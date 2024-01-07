@@ -1,10 +1,10 @@
 import {React,useState} from 'react'
-import MainPageSelection from '../components/MainPageSelection'
 import Footer from '../components/Footer'
 import NewMainPageDiv from '../components/NewMainPageDiv'
 import CategoryItemsRow from '../components/CategoryItemsRow'
 
 import NavigationContext from '../components/contexts/NavigationContext'
+import LocationContainer from '../components/LocationContainer'
 
 export default function Home() {
 
@@ -13,6 +13,7 @@ export default function Home() {
       name: "Academic Departments",
       parent : null,
       superParent : 1,
+      clickCount : 100,
       location: null,
       description : null,
       nestedList : [
@@ -26,6 +27,7 @@ export default function Home() {
       name: "Recreational",
       parent: 1,
       superParent : 1,
+      clickCount : 100,
       location : null,
       description : null,
       nestedList : [
@@ -37,9 +39,11 @@ export default function Home() {
       { id: 22, name: "OAT" }
     ]},
   
-    { id: 3, name: "Departments",
+    { id: 3,
+      name: "Departments",
       parent: null,
       superParent : 3,
+      clickCount : 100,
       location : null,  // location needed
       description : null,
       nestedList : [
@@ -66,6 +70,7 @@ export default function Home() {
       name: "React.js", // unqiue, string
       parent : 3, // unique number
       superParent : 3,
+      clickCount : 100,
       location :{
         latitude : 28.7449517, // float/number
         longitude : 77.1177903
@@ -75,28 +80,28 @@ export default function Home() {
       nestedList : [] // nested objects
     },
   
-    { id: 5, name: "Next.js",parent : 1,superParent : 1, location : {latitude : 28.7449517, longitude : 77.1177903}, description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
-    { id: 6, name: "Node.js",parent : 1,superParent : 1, location : {latitude : 28.7449517, longitude : 77.1177903}, description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
-    { id: 7, name: "Express.js",parent : 1,superParent : 1, location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
-    { id: 8, name: "C++",parent : 1,superParent : 1, location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
-    { id: 9, name: "JavaScript",parent : 1,superParent : 1, location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
-    { id: 10, name: "Tailwind CSS",parent : 1,superParent : 1, location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
-    { id: 11, name: "Bootstrap 5",parent : 1, superParent : 1,location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
-    { id: 12, name: "CSS3",parent : 1,superParent : 1, location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
-    { id: 13, name: "HTML5",parent : 1,superParent : 1, location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
-    { id: 14, name: "Git/Github",parent : 1,superParent : 1, location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
-    { id: 15, name: "MySQL",parent : 1,superParent : 1, location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
-    { id: 16, name: "MongoDB",parent : 1,superParent : 1, location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
-    { id: 17, name: "Nescafe",parent : 2, superParent : 2, location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
-    { id: 18, name: "Mech Canteen",parent : 2, superParent : 2, location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
-    { id: 19, name: "Mic Mac",parent : 2, superParent : 2, location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
-    { id: 20, name: "HPMC",parent : 2, superParent : 2, location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
-    { id: 21, name: "Amul",parent : 2, superParent : 2, location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
-    { id: 22, name: "OAT",parent : 2, superParent : 2, location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
-    { id: 23, name: "Computer Engineering",parent : 3,superParent : 3, location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
-    { id: 24, name: "Information Technology",parent : 3,superParent : 3, location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
-    { id: 25, name: "Software Engineering",parent : 3,superParent : 3, location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
-    { id: 26, name: "Mathematics and Computing Engineering",parent : 3,superParent : 3, location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] }
+    { id: 5, name: "Next.js",parent : 1,superParent : 1,clickCount : 100, location : {latitude : 28.7449517, longitude : 77.1177903}, description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
+    { id: 6, name: "Node.js",parent : 1,superParent : 1,clickCount : 100, location : {latitude : 28.7449517, longitude : 77.1177903}, description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
+    { id: 7, name: "Express.js",parent : 1,superParent : 1,clickCount : 100, location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
+    { id: 8, name: "C++",parent : 1,superParent : 1,clickCount : 100, location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
+    { id: 9, name: "JavaScript",parent : 1,superParent : 1,clickCount : 100, location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
+    { id: 10, name: "Tailwind CSS",parent : 1,superParent : 1,clickCount : 100, location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
+    { id: 11, name: "Bootstrap 5",parent : 1, superParent : 1,clickCount : 100,location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
+    { id: 12, name: "CSS3",parent : 1,superParent : 1,clickCount : 100, location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
+    { id: 13, name: "HTML5",parent : 1,superParent : 1,clickCount : 100, location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
+    { id: 14, name: "Git/Github",parent : 1,superParent : 1,clickCount : 100, location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
+    { id: 15, name: "MySQL",parent : 1,superParent : 1,clickCount : 100, location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
+    { id: 16, name: "MongoDB",parent : 1,superParent : 1,clickCount : 100, location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
+    { id: 17, name: "Nescafe",parent : 2, superParent : 2,clickCount : 100, location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
+    { id: 18, name: "Mech Canteen",parent : 2, superParent : 2,clickCount : 100, location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
+    { id: 19, name: "Mic Mac",parent : 2, superParent : 2,clickCount : 100, location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
+    { id: 20, name: "HPMC",parent : 2, superParent : 2,clickCount : 100, location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
+    { id: 21, name: "Amul",parent : 2, superParent : 2,clickCount : 100, location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
+    { id: 22, name: "OAT",parent : 2, superParent : 2,clickCount : 100, location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
+    { id: 23, name: "Computer Engineering",parent : 3,superParent : 3,clickCount : 100, location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
+    { id: 24, name: "Information Technology",parent : 3,superParent : 3,clickCount : 100, location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
+    { id: 25, name: "Software Engineering",parent : 3,superParent : 3,clickCount : 100, location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] },
+    { id: 26, name: "Mathematics and Computing Engineering",parent : 3,superParent : 3,clickCount : 100, location : {latitude : 28.7449517, longitude : 77.1177903},description : ["Room No. 216","Mechanical Dept Second Floor","Near Stairs"], nestedList : [] }
   ];
 
   const [currentItemID, setCurrentItemID] = useState(1);
@@ -106,7 +111,7 @@ export default function Home() {
       <NewMainPageDiv></NewMainPageDiv>
       <NavigationContext.Provider value={[currentItemID,setCurrentItemID,navigationItems]}>
         <CategoryItemsRow></CategoryItemsRow>
-        <MainPageSelection></MainPageSelection>
+        <LocationContainer></LocationContainer>
       </NavigationContext.Provider>
       <Footer></Footer>
     </div>
