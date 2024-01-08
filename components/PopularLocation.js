@@ -21,7 +21,7 @@ function PopularLocation() {
     let sortedNavigationItems = navigationItems.slice();
 
     // Sorting the copied array based on clickCount in ascending order
-    sortedNavigationItems.sort((a, b) => a.clickCount - b.clickCount);
+    sortedNavigationItems.sort((a, b) => b.clickCount - a.clickCount);
 
     return (
         <div className={`mx-[1rem] md:mx-[2rem] my-3 flex flex-col justify-start

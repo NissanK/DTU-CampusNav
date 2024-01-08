@@ -23,22 +23,22 @@ const categoryItems = [
         icon : 'Outdoor'
     },
     {
-        id : 5,
+        id : 6,
         name : 'Food Spots',
         icon : 'Food'
     },
     {
-        id : 6,
+        id : 8,
         name : 'Housing Facilities',
         icon : 'Housing'
     },
     {
-        id : 7,
-        name : 'Recreational Facilities',
+        id : 9,
+        name : 'Recreational Spots',
         icon : 'Recreational'
     },
     {
-        id : 8,
+        id : 7,
         name : 'Miscellaneous',
         icon : 'Miscellaneous'
     },

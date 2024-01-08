@@ -9,7 +9,8 @@ function LocationDesc({item}) {
     <div className='flex justify-between my-8'>
         <div className='flex flex-col text-background-blue justify-start w-1/2'>
           <div className='mb-4 text-2xl md:text-3xl'>{item.name}</div>
-          {item.description.map((currItem,index) => (
+          {item.description === null ? null :
+           item.description.map((currItem,index) => (
             <div className='text-xl md:text-2xl' key={index}>
               {currItem}
             </div>
