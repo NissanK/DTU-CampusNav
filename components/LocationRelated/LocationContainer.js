@@ -1,6 +1,6 @@
 import {React,useState} from 'react'
 
-import LocationSelectorHeightContext from './contexts/LocationSelectorHeightContext';
+import LocationSelectorHeightContext from '../contexts/LocationSelectorHeightContext';
 
 import LocationSelector from "./LocationSelector";
 import PopularLocation from "./PopularLocation";
@@ -10,7 +10,7 @@ function LocationContainer() {
 const [locationSelectorHeight, setLocationSelectorHeight] = useState(0);
 
   return (
-    <div className='flex'>
+    <div className='flex lg:flex-row flex-col'>
       <LocationSelectorHeightContext.Provider value={[locationSelectorHeight,setLocationSelectorHeight]}>
         <LocationSelector ></LocationSelector>
         <PopularLocation></PopularLocation>

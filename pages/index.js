@@ -1,10 +1,10 @@
 import {React,useState} from 'react'
 import Footer from '../components/Footer'
 import NewMainPageDiv from '../components/NewMainPageDiv'
-import CategoryItemsRow from '../components/CategoryItemsRow'
+import CategoryItemsRow from '../components/Categories/CategoryItemsRow'
 
 import NavigationContext from '../components/contexts/NavigationContext'
-import LocationContainer from '../components/LocationContainer'
+import LocationContainer from '../components/LocationRelated/LocationContainer'
 
 export default function Home() {
 

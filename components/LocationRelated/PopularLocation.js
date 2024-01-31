@@ -1,7 +1,7 @@
 import {React,useContext,useRef,useEffect} from 'react'
-import SelectionButton from './SelectionButton';
-import NavigationContext from './contexts/NavigationContext';
-import LocationSelectorHeightContext from './contexts/LocationSelectorHeightContext';
+import SelectionButton from '../SelectionButton';
+import NavigationContext from '../contexts/NavigationContext';
+import LocationSelectorHeightContext from '../contexts/LocationSelectorHeightContext';
 import ClickCount from './ClickCountSmall.js';
 
 function PopularLocation() {
@@ -13,7 +13,6 @@ function PopularLocation() {
 
     useEffect(() => {
       popularLocationsRef.current.style.height = `${locationSelectorHeight}px`;
-    
     }, [locationSelectorHeight])
     
 
@@ -24,9 +23,9 @@ function PopularLocation() {
     sortedNavigationItems.sort((a, b) => b.clickCount - a.clickCount);
 
     return (
-        <div className={`mx-[1rem] md:mx-[2rem] my-3 flex flex-col justify-start
-            rounded-bl-[30px] rounded-tl-[30px] bg-off-blue overflow-y-auto  w-1/3`}
-             ref = {popularLocationsRef}>
+        <div className={`mx-4 my-3 flex flex-col justify-start rounded-[30px] bg-off-blue
+            lg:rounded-tr-0 lg:rounded-br-0 lg:mx-8 lg:overflow-y-auto lg:w-1/3 `}
+            ref = {popularLocationsRef}>
             <div className="flex justify-between mx-4 md:mx-8 flex-col h-min">
 
                 <div className=" text-background-blue text-2xl md:text-3xl mt-4 md:mt-8 flex items-center">

@@ -1,9 +1,9 @@
 import {React,useContext,useState,useRef,useEffect} from "react";
-import SelectionButton from "./SelectionButton";
+import SelectionButton from "../SelectionButton";
 import LocationDesc from "./LocationDesc";
 
-import NavigationContext from "./contexts/NavigationContext";
-import LocationSelectorHeightContext from "./contexts/LocationSelectorHeightContext";
+import NavigationContext from "../contexts/NavigationContext";
+import LocationSelectorHeightContext from "../contexts/LocationSelectorHeightContext";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
@@ -25,8 +25,8 @@ function MainPageDiv() {
   }, [currentItemID])
 
   return (
-    <div className='flex ml-[1rem] md:ml-[2rem] my-3 justify-start flex-col
-      rounded-[30px] bg-off-blue h-fit w-2/3' 
+    <div className='flex ml-4 mr-4 lg:ml-8 lg:mr-0 my-3 justify-start flex-col
+      rounded-[30px] bg-off-blue h-fit lg:w-2/3 ' 
       ref={LocationSelectorRef}
       >
       <div className="flex justify-between mx-4 md:mx-8 flex-col">
