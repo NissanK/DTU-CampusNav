@@ -1,30 +1,19 @@
-import {React,useContext,useRef,useEffect} from 'react'
+import {React,useContext} from 'react'
 import SelectionButton from '../SelectionButton';
 import NavigationContext from '../contexts/NavigationContext';
-import LocationSelectorHeightContext from '../contexts/LocationSelectorHeightContext';
 import ClickCount from './ClickCountSmall.js';
 
-function PopularLocation() {
+function PopularLocationMobile() {
 
     const [currentItemID, setCurrentItemID, navigationItems] = useContext(NavigationContext);
-    const [locationSelectorHeight,setLocationSelectorHeight] = useContext(LocationSelectorHeightContext);
-
-    const popularLocationsRef = useRef(null);
-
-    useEffect(() => {
-      popularLocationsRef.current.style.height = `${locationSelectorHeight}px`;
-    }, [locationSelectorHeight])
 
     let sortedNavigationItems = navigationItems.slice();
 
     sortedNavigationItems.sort((a, b) => b.clickCount - a.clickCount);
 
-
     return (
-        <div className={`my-3 flex flex-col justify-start rounded-l-[30px] bg-off-blue
-        mx-8 overflow-y-auto w-1/3 `}
-            ref = {popularLocationsRef}>
-            <div className=" text-background-blue text-2xl md:text-3xl mt-4 md:mt-8
+        <div className={`mx-4 my-3 flex flex-col justify-start rounded-[30px] bg-off-blue`}>
+            <div className=" text-background-blue text-2xl mt-4
             flex text-center mx-auto items-center">
                 Popular Locations
             </div>
@@ -41,4 +30,4 @@ function PopularLocation() {
     )
 }
 
-export default PopularLocation
+export default PopularLocationMobile
