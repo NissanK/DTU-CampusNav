@@ -37,7 +37,7 @@ function MainPageDiv() {
 
   return (
     <div id="locationSelector" className='flex ml-2 mr-2 lg:ml-8 lg:mr-0 my-3 flex-col
-      rounded-[30px] bg-off-blue lg:w-2/3 h-fit ' 
+      rounded-[30px] bg-off-blue lg:w-2/3 h-fit px-4 md:px-8' 
       ref={LocationSelectorRef}
       >
 

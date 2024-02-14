@@ -13,12 +13,11 @@ function NewMainPageDiv() {
     <div className=' relative inline-block'>
         <img src="/images/dtu5.jpg" alt="DTU" className="block w-full h-screen object-[70%] object-cover"></img>
         <div className="absolute top-0 left-0 w-full h-full bg-lightest-blue bg-opacity-[85%] ">
-            <div className='py-20 lg:py-10 flex mx-6 lg:mx-16 h-screen justify-between'>
-                <div className='flex flex-col justify-between lg:w-1/2'>
+            <div className='py-20 lg:py-10 flex mx-2 lg:mx-16 h-screen justify-between'>
+                <div className='flex flex-col justify-between w-full lg:w-1/2'>
                   
-                  {searchInput === "" ? <MainPageContent/> : <TopResults/>}
-
                   <SearchContext.Provider value={[searchInput,setSearchInput]}>
+                    {searchInput === "" ? <MainPageContent/> : <TopResults/>}
                     <SearchBar/>
                   </SearchContext.Provider>
 

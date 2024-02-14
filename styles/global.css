@@ -69,7 +69,7 @@ body{
 
 
 .thinScrollbar::-webkit-scrollbar-thumb {
-  background-color: #73A8E7 !important;
+  background-color: transparent;
 }
 .thinScrollbar::-webkit-scrollbar {
   width: 8px;

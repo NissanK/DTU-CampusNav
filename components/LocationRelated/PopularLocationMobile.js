@@ -1,13 +1,12 @@
-import {React,useContext} from 'react'
+import {React,} from 'react'
 import SelectionButton from '../SelectionButton';
-import NavigationContext from '../contexts/NavigationContext';
 import ClickCount from './ClickCountSmall.js';
+import NavigationItems from '../NavigationItems';
 
 function PopularLocationMobile() {
 
-    const [currentItemID, setCurrentItemID, navigationItems] = useContext(NavigationContext);
 
-    let sortedNavigationItems = navigationItems.slice();
+    let sortedNavigationItems = NavigationItems.slice();
 
     sortedNavigationItems.sort((a, b) => b.clickCount - a.clickCount);
 
