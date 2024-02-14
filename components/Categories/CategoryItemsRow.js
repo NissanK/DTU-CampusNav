@@ -54,12 +54,11 @@ const categoryItems = [
 // 8. Housing Facilities (residential and hostels)
 // 9. Recreation Facilities (sports complex, badminton, cricket, football, oat, mini oat, concert ground)
 
-
 // will add carousel for mobile phones, that will showcase better, the one used in bootstrap types
 
 function CategoryItemsRow() {
   return (
-    <div className='flex items-center justify-around mx-5 my-10 flex-wrap'>
+    <div className='flex items-center justify-around mx-2 lg:mx-5 my-4 md:my-7 lg:my-10 flex-wrap'>
         {categoryItems.map((currItem,index) => (
             <CategoryIcons category={currItem} key={index}></CategoryIcons>
         ))}

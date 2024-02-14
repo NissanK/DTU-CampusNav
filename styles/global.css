@@ -32,37 +32,84 @@ body{
     filter: brightness(110%);
 }
 
-ScrollBar Properties
+
+/* ScrollBar Properties */
 
 /* For WebKit browsers (Chrome, Safari) */
 ::-webkit-scrollbar {
-    width: 12px;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-      background-color: #73A8E7; /* Color of the track */
-    }
-    
-    ::-webkit-scrollbar-track {
-      background-color: #112D4E; /* Color of the thumb */
-  }
-  
-  /* For Firefox */
-  /* Note: Firefox supports scrollbar-color, so you can use that instead of the below styles */
-  /* However, some versions might still require the below styles */
-  * {
-    scrollbar-color: #73A8E7 #112D4E;
-  }
-  
-  *::-webkit-scrollbar {
-    width: 12px;
-  }
-  
-  *::-webkit-scrollbar-thumb {
-    background-color: #73A8E7;
+  width: 12px;
 }
 
-*::-webkit-scrollbar-track {
-    background-color: #112D4E;
+::-webkit-scrollbar-thumb {
+  background-color: #73A8E7; /* Color of the track */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #112D4E; /* Color of the thumb */
+}
+
+/* For Firefox */
+/* Note: Firefox supports scrollbar-color, so you can use that instead of the below styles */
+/* However, some versions might still require the below styles */
+
+/* * {
+  scrollbar-color: #73A8E7 #112D4E;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #73A8E7;
+} */
+
+/* Thin ScrollBar Properties */
+/* For WebKit browsers (Chrome, Safari) */
+
+
+.thinScrollbar::-webkit-scrollbar-thumb {
+  background-color: #73A8E7 !important;
+}
+.thinScrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.thinScrollbarColor::-webkit-scrollbar {
+  background-color: #112D4E;
+}
+.thinScrollbarColor::-webkit-scrollbar {
+  width: 8px;
+}
+
+.thinScrollbar::-webkit-scrollbar-track {
+  background-color: transparent ; 
+}
+
+@media only screen and (max-width: 1023px) {
+  ::-webkit-scrollbar {
+    width: 8px;
   }
-  
+
+  .thinScrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .thinScrollbarColor::-webkit-scrollbar {
+    width: 6px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .thinScrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .thinScrollbarColor::-webkit-scrollbar {
+    width: 4px;
+  }
+}

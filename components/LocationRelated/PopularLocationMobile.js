@@ -12,7 +12,7 @@ function PopularLocationMobile() {
     sortedNavigationItems.sort((a, b) => b.clickCount - a.clickCount);
 
     return (
-        <div className={`mx-4 my-3 flex flex-col justify-start rounded-[30px] bg-off-blue`}>
+        <div className={`mx-2 my-3 flex flex-col justify-start rounded-[30px] bg-off-blue`}>
             <div className=" text-background-blue text-2xl mt-4
             flex text-center mx-auto items-center">
                 Popular Locations

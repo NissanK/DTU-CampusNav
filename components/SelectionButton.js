@@ -1,4 +1,4 @@
-import {React,useContext} from 'react'
+import {React,useContext,useEffect,useRef} from 'react'
 import NavigationContext from './contexts/NavigationContext';
 
 function SelectionButton({item}) {
@@ -8,13 +8,31 @@ function SelectionButton({item}) {
     setCurrentItemID(item.id);
   };
 
+  const linkRef = useRef(null);
+
+  useEffect(() => {
+      function anchorSmoothScroll(e){
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+              behavior : "smooth"
+          });
+      }
+      linkRef.current.addEventListener("click",anchorSmoothScroll);
+      
+      return () =>{
+          if (linkRef.current !== null) {
+              linkRef.current.removeEventListener('click',anchorSmoothScroll);
+          }
+      }
+  }, []);
+
   return (
-    <div className='w-[9rem] sm:w-[12rem] min-h-[2.5rem] min-sm:h-[3rem]
+    <a href={"#locationSelector"} ref={linkRef}  className='w-[8rem] sm:w-[12rem] min-h-[2.5rem] min-sm:h-[3rem]
      px-[0.25rem] py-[0.1rem] rounded-[0.6875rem] flex justify-center overflow-hidden
-     items-center gradient-hotspot transition-colors mb-6 md:mb-9 text-[0.8rem] md:text-[1rem] mr-2 cursor-pointer text-center' 
+     items-center gradient-hotspot transition-colors mb-6 md:mb-9 text-[0.8rem] md:text-[1rem] mx-2 cursor-pointer text-center' 
      onClick={handleButtonClick}>
       {item.name}
-    </div>
+    </a>
   )
 }
 

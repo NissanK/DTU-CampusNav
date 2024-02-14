@@ -6,7 +6,6 @@ import LocationSelector from "./LocationSelector";
 import PopularLocation from "./PopularLocation";
 import PopularLocationMobile from './PopularLocationMobile';
 
-
 function LocationContainer() {
   
   const [locationSelectorHeight, setLocationSelectorHeight] = useState(0);

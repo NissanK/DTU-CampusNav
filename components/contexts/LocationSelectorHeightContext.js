@@ -1,4 +1,3 @@
-// contexts/MyContext.js
 import { createContext } from 'react';
 
 const LocationSelectorHeightContext = createContext();

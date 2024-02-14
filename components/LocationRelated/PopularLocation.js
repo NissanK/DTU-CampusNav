@@ -22,7 +22,7 @@ function PopularLocation() {
 
     return (
         <div className={`my-3 flex flex-col justify-start rounded-l-[30px] bg-off-blue
-        mx-8 overflow-y-auto w-1/3 `}
+        mx-8 overflow-y-auto w-1/3 thinScrollbarColor`}
             ref = {popularLocationsRef}>
             <div className=" text-background-blue text-2xl md:text-3xl mt-4 md:mt-8
             flex text-center mx-auto items-center">
