@@ -21,7 +21,7 @@ function SelectionButton({item}) {
       
       return () =>{
           if (linkRef.current !== null) {
-              linkRef.current.removeEventListener('click',anchorSmoothScroll);
+              linkRef.current.RemoveEventListener('click',anchorSmoothScroll);
           }
       }
   }, []);

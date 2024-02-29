@@ -17,7 +17,7 @@ function NewMainPageDiv() {
                 <div className='flex flex-col justify-between w-full lg:w-1/2'>
                   
                   <SearchContext.Provider value={[searchInput,setSearchInput]}>
-                    {searchInput === "" ? <MainPageContent/> : <TopResults/>}
+                    {searchInput === "" ? <MainPageContent/> : <TopResults/>} 
                     <SearchBar/>
                   </SearchContext.Provider>
 

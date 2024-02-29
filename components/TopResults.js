@@ -59,8 +59,8 @@ function TopResults() {
   }, [searchInput])
 
   return (
-    <div className={`my-3 max-h-[75%] flex flex-col rounded-[30px] 
-      bg-off-blue/50 overflow-y-auto thinScrollbar `}>
+    <a id="topResults" className={`my-3 max-h-[75%] flex flex-col rounded-[30px] 
+      bg-off-blue/50 overflow-y-auto thinScrollbar flex-1`}>
 
         <div className=" text-background-blue text-2xl md:text-3xl mt-4 md:mt-8
         flex text-center mx-auto items-center">
@@ -77,7 +77,7 @@ function TopResults() {
             ))
           }
         </div>
-    </div>
+    </a>
   )
 }
 
