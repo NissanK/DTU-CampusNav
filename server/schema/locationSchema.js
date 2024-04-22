@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
 
-const formSchema = new mongoose.Schema({
+const dbConnection = process.env.DB_CONNECTION;
+mongoose.connect(dbConnection);
+
+const locationSchema = new mongoose.Schema({
     id: {
         type: Number,
         required: true,
@@ -20,44 +23,36 @@ const formSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    // It's better to use GeoJSON for location data in MongoDB
     location: {
         type: {
-            latitude: {
-                type: Number,
-            },
-            longitude: {
-                type: Number,
-            },
+            type: String,
+            enum: ['Point'], // 'location.type' must be 'Point'
+            required: true
         },
+        coordinates: {
+            type: [Number],
+            required: true
+        }
     },
     description: {
         type: [String],
     },
     nestedList: {
-        type: [{
+        type: [new mongoose.Schema({
             nestedItemId: {
                 type: Number,
             },
             nestedItemName: {
                 type: String,
             },
-        }],
+        })],
     },
     clickCount:{
         type: Number,        
     },
-    }, 
-);
-const FormModel = mongoose.model('Form', formSchema);
-module.exports = FormModel;
+});
 
-/*Schema Fields 
-1. Primary ID
-2. Parent ID
-3. Super Parent ID
-4. Name
-5. Location
-6. Description
-7. Nested list
-8. Click Count
-*/
+// It's better to use a more descriptive name for the model
+const Location = mongoose.model('Location', locationSchema);
+module.exports = Location;
