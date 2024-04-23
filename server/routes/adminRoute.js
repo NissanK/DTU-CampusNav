@@ -6,11 +6,14 @@ const router = Router();
 
 const JWT_SECRET = process.env.JWT_SECRET;
 
+const locationRoute = require("./adminLocationRoute");
+
+router.use("/locations", locationRoute);
+
 router.post('/signin', async (req, res) => {
-    
+
     const username = req.body.username;
     const password = req.body.password;
-    console.log(JWT_SECRET);
 
     const admin = await Admin.find({
         username,

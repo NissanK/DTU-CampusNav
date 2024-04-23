@@ -1,1039 +1,1291 @@
 [
-    {
-        "id": 1,
-        "name": "Academic Departments",
-        "parent": null,
-        "superParent": 1,
-        "location": null,
-        "description": null,
-        "nestedList": [
-          { "id": 24, "name": "Classrooms" },
-          { "id": 50, "name": "Computer Engineering" },
-          { "id": 51, "name": "Information Technology" },
-          { "id": 52, "name": "Software Engineering" },
-          { "id": 53, "name": "Mathematics and Computing Engineering" },
-          { "id": 54, "name": "Electrical Engineering" },
-          { "id": 55, "name": "Electronics and Communication Engineering" },
-          { "id": 56, "name": "Civil Engineering" },
-          { "id": 57 , "name": "Mechanical Engineering" },
-          { "id": 58, "name": "Automotive Engineering" },
-          { "id": 59, "name": "Production and Industrial Engineering"},
-          { "id": 60, "name": "BioTechnology" },
-          { "id": 61, "name": "Environmental Engineering" },
-          { "id": 62, "name": "Department of Design" },
-          { "id": 63, "name": "Delhi School of Management" }
-        ],
-       "clickCount": 100
-      },
-      {
-        "id": 2,
-        "name": "Student Services",
-        "parent": null,
-        "superParent": 2,
-        "location": null,
-        "description": null,
-        "nestedList": [
-          { "id": 21 , "name": "State Bank of India"},
-          { "id": 16, "name": "Enquiry Office"},
-          { "id": 64, "name": "DTU Library" },
-          { "id": 65, "name": "Administrative Block" }
-         ],
-       "clickCount": 100
-      },
-      {
-        "id": 3,
-        "name": "Auditoriums",
-        "parent": null,
-        "superParent": 3,
-        "location": null,
-        "description": null,
-        "nestedList": [
-        { "id": 66, "name": "Dr. BR Ambedkar Auditorium" },
-        { "id": 67, "name": "Raj Soin Hall" },
-        { "id": 68, "name": "Convocation Hall" }
-       ],
-       "clickCount": 100
-      },
-      {
-        "id": 4,
-        "name": "Outdoor Spaces",
-        "parent": null,
-        "superParent": 4,
-        "location": null,
-        "description": null,
-        "nestedList": [
-        { "id": 69, "name": "Open Air Theatre" },
-        { "id": 70, "name": "Wind Point" },
-        { "id": 71, "name": "Mini OAT" }
-      ],
-       "clickCount": 100
-      },
-      {
-        "id": 5,
-        "name": "Parking",
-        "parent": null,
-        "superParent": 5,
-        "location": null,
-        "description": null,
-        "nestedList": [
-          {"id": 72,"name": "Student Parking"}
-        ],
-       "clickCount": 100
-      },
-      {
-        "id": 6,
-        "name": "Food Spots",
-        "parent": null,
-        "superParent": 6,
-        "location": null,
-        "description": null,
-        "nestedList": [
-          {"id": 15 ,"name": "Aryabhatta Mess"},
-          {"id": 82 ,"name": "Pragya Bhawan Cafetaria"},
-          { "id": 73, "name": "Nescafe" },
-          { "id": 74, "name": "Mic Mac Canteen" },
-          { "id": 75, "name": "Main Canteen" }
-      ],
-       "clickCount": 100
-      },
-      {
-        "id": 7,
-        "name": "Miscellaneous",
-        "parent": null,
-        "superParent": 7,
-        "location": null,
-        "description": null,
-        "nestedList": [
-          {"id": 10,"name": "DTU Gate Number-2"},
-          { "id": 14,  "name": "Kids Daycare"},
-          { "id": 76, "name": "Team Defianz-DTUSDC Lab" },
-          { "id": 77, "name": "Incubation & Innovation Foundation, DTU" },
-          { "id": 78, "name": "Samsung Innovation Campus Lab" }
-     ],
-       "clickCount": 100
-      },
-      {
-        "id": 8,
-        "name": "Housing Facilities",
-        "parent": null,
-        "superParent": 8,
-        "location": null,
-        "description": null,
-        "nestedList": [ 
-        { "id": 11, "name": "Aryabhatta Hostel Block-1" },
-        { "id": 12, "name": "Aryabhatta Hostel Block-2" },
-        { "id": 13, "name": "Type-II Hostel" },
-        { "id": 17, "name": "Type-III Hostel" },
-        { "id": 18, "name": "Type-V Hostel: Block-2" },
-        { "id": 19, "name": "Type-V Hostel: Block-1" },
-        { "id": 20, "name": "Type-V Hostel: Block-3" },
-        { "id": 22, "name": "Vice Chancellor Residence" }
-      ],
-       "clickCount": 100
-      },
-      {
-        "id": 9,
-        "name": "Recreation Facilities",
-        "parent": null,
-        "superParent": 9,
-        "location": null,
-        "description": null,
-        "nestedList": [
-        { "id": 79, "name": "Indoor Sports Complex" },
-        { "id": 80, "name": "DTU Gym" },
-        { "id": 81, "name": "DTU Lake" }
-     ],
-       "clickCount": 100
-      },
-      {
-        "id": 10,
-        "name": "DTU Gate Number-2",
-        "parent": 7,
-        "superParent": 7,
-        "location": {
-          "latitude": 28.7449517,
-          "longitude": 77.1177903
-        },
-        "description": ["Alternate Entrance Gate for DTU"],
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 11,
-        "name": "Aryabhatta Hostel Block-1",
-        "parent": 8,
-        "superParent": 8,
-        "location": {
-          "latitude": 28.7453824,
-          "longitude": 77.1179087
-        },
-        "description": ["Boys Hostel for Undergraduate Student"],
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 12,
-        "name": "Aryabhatta Hostel Block-2",
-        "parent": 8,
-        "superParent": 8,
-        "location": {
-          "latitude": 28.74558396173921,
-          "longitude": 77.1180780093382
-        },
-        "description": ["Boys Hostel for Undergraduate Student"],
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 13,
-        "name": "Type-II Hostel",
-        "parent": 8,
-        "superParent": 8,
-        "location": {
-          "latitude":  28.7459579, 
-          "longitude": 77.1185474
-        },
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 14,
-        "name": "Kids Daycare",
-        "parent": 7,
-        "superParent": 7,
-        "location": {
-          "latitude": 28.7460488, 
-          "longitude": 77.1182443
-        },
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 15,
-        "name": "Aryabhatta Mess",
-        "parent": 6,
-        "superParent": 6,
-        "location": {
-          "latitude":  28.7459171, 
-          "longitude": 77.1187720 
-        },
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      }, 
-      {
-        "id": 16,
-        "name": "Enquiry Office",
-        "parent": 2,
-        "superParent": 2,
-        "location": {
-          "latitude":  28.7463948,
-          "longitude": 77.1188474
-        },
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 17,
-        "name": "Type-III Hostel",
-        "parent": 8,
-        "superParent": 8,
-        "location": {
-          "latitude":  28.7469236, 
-          "longitude": 77.1189510
-        },
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 18,
-        "name": "Type-V Hostel: Block-2",
-        "parent": 8,
-        "superParent": 8,
-        "location": {
-          "latitude":  28.7471949,  
-          "longitude": 77.1197681
-        },
-        "description": ["Flat Number: 15-28"],
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 19,
-        "name": "Type-V Hostel: Block-1",
-        "parent": 8,
-        "superParent": 8,
-        "location": {
-          "latitude":  28.74774416614134,
-          "longitude": 77.1194530959428
-        },
-        "description": ["Flat Number: 1-14"],
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 20,
-        "name": "Type-V Hostel: Block-3",
-        "parent": 8,
-        "superParent": 8,
-        "location": {
-          "latitude":  28.74772560502491, 
-          "longitude": 77.12017189594279
-        },
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 21,
-        "name": "State Bank of India",
-        "parent": 2,
-        "superParent": 2,
-        "location": {
-          "latitude":  28.747510588574844,  
-          "longitude": 77.11964204012483
-        },
-        "description": ["SBI DTU Branch","ATM"],
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 22,
-        "name": "Vice Chancellor Residence",
-        "parent": 8,
-        "superParent": 8,
-        "location": {
-          "latitude":  28.7475309,
-          "longitude": 77.1201319 
-        },
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 23,
-        "name": "Classrooms",
-        "parent": 1,
-        "superParent": 1,
-        "location": null,
-        "description": null,
-        "nestedList": [
-          { "id": 24, "name": "SPSs" },
-          { "id": 25, "name": "Pragya Bhawan" }
-        ],
-       "clickCount": 100
-      },
-      {
-        "id": 24,
-        "name": "SPS",
-        "parent": 23,
-        "superParent": 1,
-        "location": null,
-        "description": null,
-        "nestedList": [
-         { "id": 26, "name": "SPS 1" },
-         { "id": 27, "name": "SPS 2" },
-         { "id": 28, "name": "SPS 3" },
-         { "id": 29, "name": "SPS 4" },
-         { "id": 30, "name": "SPS 5" },
-         { "id": 31, "name": "SPS 6" },
-         { "id": 32, "name": "SPS 7" },
-         { "id": 33, "name": "SPS 8" },
-         { "id": 34, "name": "SPS 9" },
-         { "id": 35, "name": "SPS 10" },
-         { "id": 36, "name": "SPS 11" },
-         { "id": 37, "name": "SPS 12" }
-        ],
-       "clickCount": 100
-      },
-      {
-        "id": 25,
-        "name": "Pragya Bhawan",
-        "parent": 23,
-        "superParent": 1,
-        "location": null,
-        "description": null,
-        "nestedList": [
-          { "id": 38, "name": "PBGF1" },
-          { "id": 39, "name": "PBGF2" },
-          { "id": 40, "name": "PBGF3" },
-          { "id": 41, "name": "PBGF4" },
-          { "id": 42, "name": "PBGF5" },
-          { "id": 43, "name": "PBGF6" },
-          { "id": 44, "name": "PBFF1" },
-          { "id": 45, "name": "PBFF2" },
-          { "id": 46, "name": "PBFF3" },
-          { "id": 47, "name": "PBFF4" },
-          { "id": 48, "name": "PBFF5" },
-          { "id": 49, "name": "PBFF6" }
-        ],
-       "clickCount": 100
-      },
-      {
-        "id": 26,
-        "name": "SPS 1",
-        "parent": 24,
-        "superParent": 1,
-        "location": {
-          "latitude":  28.7514830,
-          "longitude": 77.1188940 
-        },
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 27,
-        "name": "SPS 2",
-        "parent": 24,
-        "superParent": 1,
-        "location": {
-          "latitude":  28.7514830,
-          "longitude": 77.1188940 
-        },
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 28,
-        "name": "SPS 3",
-        "parent": 24,
-        "superParent": 1,
-        "location": {
-          "latitude":  28.7513551, 
-          "longitude": 77.1187428
-        },
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 29,
-        "name": "SPS 4",
-        "parent": 24,
-        "superParent": 1,
-        "location": {
-          "latitude":  28.7513551, 
-          "longitude": 77.1187428
-        },
-        "description": ["Engineering Graphics (EG) Room"],
-        "nestedList": [],
-       "clickCount": 100
-      }, 
-      {
-        "id": 30,
-        "name": "SPS 5",
-        "parent": 24,
-        "superParent": 1,
-        "location": {
-          "latitude":  28.7511338,
-          "longitude": 77.1192266 
-        },
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 31,
-        "name": "SPS 6",
-        "parent": 24,
-        "superParent": 1,
-        "location": {
-          "latitude":  28.7511338,
-          "longitude": 77.1192266 
-        },
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 32,
-        "name": "SPS 7",
-        "parent": 24,
-        "superParent": 1,
-        "location": {
-          "latitude":  28.7510680, 
-          "longitude": 77.1190738
-        },
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 33,
-        "name": "SPS 8",
-        "parent": 24,
-        "superParent": 1,
-        "location": {
-          "latitude":  28.7510680, 
-          "longitude": 77.1190738
-        },
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 34,
-        "name": "SPS 9",
-        "parent": 24,
-        "superParent": 1,
-        "location": {
-          "latitude":  28.7494183,
-          "longitude": 77.1200866
-        },
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 35,
-        "name": "SPS 10",
-        "parent": 24,
-        "superParent": 1,
-        "location": {
-          "latitude":  28.7490562, 
-          "longitude": 77.1205493 
-        },
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 36,
-        "name": "SPS 11",
-        "parent": 24,
-        "superParent": 1,
-        "location": {
-          "latitude":  28.7494615, 
-          "longitude": 77.1200357 
-        },
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 37,
-        "name": "SPS 12",
-        "parent": 24,
-        "superParent": 1,
-        "location": {
-          "latitude":  28.7494031, 
-          "longitude": 77.1202516
-        },
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 38,
-        "name": "PBGF1",
-        "parent": 25,
-        "superParent": 1,
-        "location": {
-          "latitude":  28.7490562, 
-          "longitude": 77.1205493 
-        },
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 39,
-        "name": "PBGF2",
-        "parent": 25,
-        "superParent": 1,
-        "location": {
-          "latitude":  28.7490562, 
-          "longitude": 77.1205493 
-        },
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 40,
-        "name": "PBGF3",
-        "parent": 25,
-        "superParent": 1,
-        "location": {
-          "latitude":  28.7490562, 
-          "longitude": 77.1205493 
-        },
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 44,
-        "name": "PBFF1",
-        "parent": 25,
-        "superParent": 1,
-        "location": {
-          "latitude":  28.7490562, 
-          "longitude": 77.1205493 
-        },
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 45,
-        "name": "PBFF2",
-        "parent": 25,
-        "superParent": 1,
-        "location": {
-          "latitude":  28.7490562, 
-          "longitude": 77.1205493 
-        },
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 46,
-        "name": "PBFF3",
-        "parent": 25,
-        "superParent": 1,
-        "location": {
-          "latitude":  28.7490562, 
-          "longitude": 77.1205493 
-        },
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 41,
-        "name": "PBGF4",
-        "parent": 25,
-        "superParent": 1,
-        "location": {
-          "latitude":  28.7490862,  
-          "longitude": 77.1206073
-        },
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 42,
-        "name": "PBGF5",
-        "parent": 25,
-        "superParent": 1,
-        "location": {
-          "latitude":  28.7490862,  
-          "longitude": 77.1206073
-        },
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 43,
-        "name": "PBGF6",
-        "parent": 25,
-        "superParent": 1,
-        "location": {
-          "latitude":  28.7490862,  
-          "longitude": 77.1206073
-        },
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 47,
-        "name": "PBFF4",
-        "parent": 25,
-        "superParent": 1,
-        "location": {
-          "latitude":  28.7490862,  
-          "longitude": 77.1206073
-        },
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 48,
-        "name": "PBFF5",
-        "parent": 25,
-        "superParent": 1,
-        "location": {
-          "latitude":  28.7490862,  
-          "longitude": 77.1206073
-        },
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 49,
-        "name": "PBFF6",
-        "parent": 25,
-        "superParent": 1,
-        "location": {
-          "latitude":  28.7490862,  
-          "longitude": 77.1206073
-        },
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 50,
-        "name": "Computer Engineering",
-        "parent": 1,
-        "superParent": 1,
-        "location": null,
-        "description": ["AB-4"],
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 51,
-        "name": "Information Technology",
-        "parent": 1,
-        "superParent": 1,
-        "location": null,
-        "description": ["AB-3"],
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 52,
-        "name": "Software Engineering",
-        "parent": 1,
-        "superParent": 1,
-        "location": null,
-        "description": ["AB-4"],
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 53,
-        "name": "Mathematics and Computing Engineering",
-        "parent": 1,
-        "superParent": 1,
-        "location": null,
-        "description": ["AB-3"],
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 54,
-        "name": "Electrical Engineering",
-        "parent": 1,
-        "superParent": 1,
-        "location": null,
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 55,
-        "name": "Electronics and Communication Engineering",
-        "parent": 1,
-        "superParent": 1,
-        "location": null,
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 56,
-        "name": "Civil Engineering",
-        "parent": 1,
-        "superParent": 1,
-        "location": null,
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 57,
-        "name": "Mechanical Engineering",
-        "parent": 1,
-        "superParent": 1,
-        "location": null,
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 58,
-        "name": "Automotive Engineering",
-        "parent": 1,
-        "superParent": 1,
-        "location": null,
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 59,
-        "name": "Production and Industrial Engineering",
-        "parent": 1,
-        "superParent": 1,
-        "location": null,
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 60,
-        "name": "BioTechnology",
-        "parent": 1,
-        "superParent": 1,
-        "location": null,
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 61,
-        "name": "Environmental Engineering",
-        "parent": 1,
-        "superParent": 1,
-        "location": null,
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 62,
-        "name": "Department of Design",
-        "parent": 1,
-        "superParent": 1,
-        "location": null,
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 63,
-        "name": "Delhi School of Management",
-        "parent": 1,
-        "superParent": 1,
-        "location": null,
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 64,
-        "name": "DTU Library",
-        "parent": 2,
-        "superParent": 2,
-        "location":  {
-          "latitude":  28.750806821176777,
-          "longitude": 77.11649823856844  
-        },
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },  
-      {
-        "id": 65,
-        "name": "Administrative Block",
-        "parent": 2,
-        "superParent": 2,
-        "location":  {
-          "latitude":  28.749733428422477, 
-          "longitude": 77.11619002852125  
-        },
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 66,
-        "name": "Dr. BR Ambedkar Auditorium",
-        "parent": 3,
-        "superParent": 3,
-        "location":  {
-          "latitude":  28.750325246872087,
-          "longitude": 77.11639187687737  
-        },
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },    
-      {
-        "id": 67,
-        "name": "Raj Soin Hall",
-        "parent": 3,
-        "superParent": 3,
-        "location":  {
-          "latitude":  28.750915530967266, 
-          "longitude": 77.11445159896837   
-        },
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },      
-      {
-        "id": 68,
-        "name": "Convocation Hall",
-        "parent": 3,
-        "superParent": 3,
-        "location":  {
-          "latitude":  28.74937385143597, 
-          "longitude": 77.11823358430681   
-        },
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 69,
-        "name": "Open Air Theatre",
-        "parent": 4,
-        "superParent": 4,
-        "location": null,
-        "description":["OAT"],
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 70,
-        "name": "Wind Point",
-        "parent": 4,
-        "superParent": 4,
-        "location": null,
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 71,
-        "name": "Mini OAT",
-        "parent": 4,
-        "superParent": 4,
-        "location": null,
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 72,
-        "name": "Student Parking",
-        "parent": 5,
-        "superParent": 5,
-        "location": {
-          "latitude" : 28.74889354043285,
-          "longitude" : 77.11554802244869
-        },
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 73,
-        "name": "Nescafe",
-        "parent": 6,
-        "superParent": 6,
-        "location": null,
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 74,
-        "name": "Mic Mac Canteen",
-        "parent": 6,
-        "superParent": 6,
-        "location": null,
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 75,
-        "name": "Main Canteen",
-        "parent": 6,
-        "superParent": 6,
-        "location": null,
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 76,
-        "name": "Team Defianz-DTUSDC Lab",
-        "parent": 7,
-        "superParent": 7,
-        "location": null,
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 77,
-        "name": "Incubation & Innovation Foundation, DTU",
-        "parent": 6,
-        "superParent": 6,
-        "location": null,
-        "description": ["DTU IIF","8th Floor","AB-4 Block"],
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 78,
-        "name": "Samsung Innovation Campus Lab",
-        "parent": 6,
-        "superParent": 6,
-        "location": null,
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 79,
-        "name": "Indoor Sports Complex",
-        "parent": 9,
-        "superParent": 9,
-        "location": null,
-        "description": ["Badminton","Billiards","Chess"],
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 80,
-        "name": "DTU Gym",
-        "parent": 9,
-        "superParent": 9,
-        "location": null,
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },
-      {
-        "id": 81,
-        "name": "DTU Lake",
-        "parent": 9,
-        "superParent": 9,
-        "location": null,
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      },     
-      {
-        "id": 82,
-        "name": "Pragya Bhawan Cafetaria",
-        "parent": 6,
-        "superParent": 6,
-        "location": {
-          "latitude":  28.7491852, 
-          "longitude": 77.1200290
-        },
-        "description": null,
-        "nestedList": [],
-       "clickCount": 100
-      }          
+  {
+    "id": 1,
+    "name": "Academic Departments",
+    "parent": null,
+    "superParent": 1,
+    "location": null,
+    "description": null,
+    "nestedList": [
+      {
+        "nestedItemId": 24,
+        "nestedItemName": "Classrooms"
+      },
+      {
+        "nestedItemId": 50,
+        "nestedItemName": "Computer Engineering"
+      },
+      {
+        "nestedItemId": 51,
+        "nestedItemName": "Information Technology"
+      },
+      {
+        "nestedItemId": 52,
+        "nestedItemName": "Software Engineering"
+      },
+      {
+        "nestedItemId": 53,
+        "nestedItemName": "Mathematics and Computing Engineering"
+      },
+      {
+        "nestedItemId": 54,
+        "nestedItemName": "Electrical Engineering"
+      },
+      {
+        "nestedItemId": 55,
+        "nestedItemName": "Electronics and Communication Engineering"
+      },
+      {
+        "nestedItemId": 56,
+        "nestedItemName": "Civil Engineering"
+      },
+      {
+        "nestedItemId": 57,
+        "nestedItemName": "Mechanical Engineering"
+      },
+      {
+        "nestedItemId": 58,
+        "nestedItemName": "Automotive Engineering"
+      },
+      {
+        "nestedItemId": 59,
+        "nestedItemName": "Production and Industrial Engineering"
+      },
+      {
+        "nestedItemId": 60,
+        "nestedItemName": "BioTechnology"
+      },
+      {
+        "nestedItemId": 61,
+        "nestedItemName": "Environmental Engineering"
+      },
+      {
+        "nestedItemId": 62,
+        "nestedItemName": "Department of Design"
+      },
+      {
+        "nestedItemId": 63,
+        "nestedItemName": "Delhi School of Management"
+      }
+    ],
+    "clickCount": 100
+  },
+  {
+    "id": 2,
+    "name": "Student Services",
+    "parent": null,
+    "superParent": 2,
+    "location": null,
+    "description": null,
+    "nestedList": [
+      {
+        "nestedItemId": 21,
+        "nestedItemName": "State Bank of India"
+      },
+      {
+        "nestedItemId": 16,
+        "nestedItemName": "Enquiry Office"
+      },
+      {
+        "nestedItemId": 64,
+        "nestedItemName": "DTU Library"
+      },
+      {
+        "nestedItemId": 65,
+        "nestedItemName": "Administrative Block"
+      }
+    ],
+    "clickCount": 100
+  },
+  {
+    "id": 3,
+    "name": "Auditoriums",
+    "parent": null,
+    "superParent": 3,
+    "location": null,
+    "description": null,
+    "nestedList": [
+      {
+        "nestedItemId": 66,
+        "nestedItemName": "Dr. BR Ambedkar Auditorium"
+      },
+      {
+        "nestedItemId": 67,
+        "nestedItemName": "Raj Soin Hall"
+      },
+      {
+        "nestedItemId": 68,
+        "nestedItemName": "Convocation Hall"
+      }
+    ],
+    "clickCount": 100
+  },
+  {
+    "id": 4,
+    "name": "Outdoor Spaces",
+    "parent": null,
+    "superParent": 4,
+    "location": null,
+    "description": null,
+    "nestedList": [
+      {
+        "nestedItemId": 69,
+        "nestedItemName": "Open Air Theatre"
+      },
+      {
+        "nestedItemId": 70,
+        "nestedItemName": "Wind Point"
+      },
+      {
+        "nestedItemId": 71,
+        "nestedItemName": "Mini OAT"
+      }
+    ],
+    "clickCount": 100
+  },
+  {
+    "id": 5,
+    "name": "Parking",
+    "parent": null,
+    "superParent": 5,
+    "location": null,
+    "description": null,
+    "nestedList": [
+      {
+        "nestedItemId": 72,
+        "nestedItemName": "Student Parking"
+      }
+    ],
+    "clickCount": 100
+  },
+  {
+    "id": 6,
+    "name": "Food Spots",
+    "parent": null,
+    "superParent": 6,
+    "location": null,
+    "description": null,
+    "nestedList": [
+      {
+        "nestedItemId": 15,
+        "nestedItemName": "Aryabhatta Mess"
+      },
+      {
+        "nestedItemId": 82,
+        "nestedItemName": "Pragya Bhawan Cafetaria"
+      },
+      {
+        "nestedItemId": 73,
+        "nestedItemName": "Nescafe"
+      },
+      {
+        "nestedItemId": 74,
+        "nestedItemName": "Mic Mac Canteen"
+      },
+      {
+        "nestedItemId": 75,
+        "nestedItemName": "Main Canteen"
+      }
+    ],
+    "clickCount": 100
+  },
+  {
+    "id": 7,
+    "name": "Miscellaneous",
+    "parent": null,
+    "superParent": 7,
+    "location": null,
+    "description": null,
+    "nestedList": [
+      {
+        "nestedItemId": 10,
+        "nestedItemName": "DTU Gate Number-2"
+      },
+      {
+        "nestedItemId": 14,
+        "nestedItemName": "Kids Daycare"
+      },
+      {
+        "nestedItemId": 76,
+        "nestedItemName": "Team Defianz-DTUSDC Lab"
+      },
+      {
+        "nestedItemId": 77,
+        "nestedItemName": "Incubation & Innovation Foundation, DTU"
+      },
+      {
+        "nestedItemId": 78,
+        "nestedItemName": "Samsung Innovation Campus Lab"
+      }
+    ],
+    "clickCount": 100
+  },
+  {
+    "id": 8,
+    "name": "Housing Facilities",
+    "parent": null,
+    "superParent": 8,
+    "location": null,
+    "description": null,
+    "nestedList": [
+      {
+        "nestedItemId": 11,
+        "nestedItemName": "Aryabhatta Hostel Block-1"
+      },
+      {
+        "nestedItemId": 12,
+        "nestedItemName": "Aryabhatta Hostel Block-2"
+      },
+      {
+        "nestedItemId": 13,
+        "nestedItemName": "Type-II Hostel"
+      },
+      {
+        "nestedItemId": 17,
+        "nestedItemName": "Type-III Hostel"
+      },
+      {
+        "nestedItemId": 18,
+        "nestedItemName": "Type-V Hostel: Block-2"
+      },
+      {
+        "nestedItemId": 19,
+        "nestedItemName": "Type-V Hostel: Block-1"
+      },
+      {
+        "nestedItemId": 20,
+        "nestedItemName": "Type-V Hostel: Block-3"
+      },
+      {
+        "nestedItemId": 22,
+        "nestedItemName": "Vice Chancellor Residence"
+      }
+    ],
+    "clickCount": 100
+  },
+  {
+    "id": 9,
+    "name": "Recreation Facilities",
+    "parent": null,
+    "superParent": 9,
+    "location": null,
+    "description": null,
+    "nestedList": [
+      {
+        "nestedItemId": 79,
+        "nestedItemName": "Indoor Sports Complex"
+      },
+      {
+        "nestedItemId": 80,
+        "nestedItemName": "DTU Gym"
+      },
+      {
+        "nestedItemId": 81,
+        "nestedItemName": "DTU Lake"
+      }
+    ],
+    "clickCount": 100
+  },
+  {
+    "id": 10,
+    "name": "DTU Gate Number-2",
+    "parent": 7,
+    "superParent": 7,
+    "location": {
+      "latitude": 28.7449517,
+      "longitude": 77.1177903
+    },
+    "description": [
+      "Alternate Entrance Gate for DTU"
+    ],
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 11,
+    "name": "Aryabhatta Hostel Block-1",
+    "parent": 8,
+    "superParent": 8,
+    "location": {
+      "latitude": 28.7453824,
+      "longitude": 77.1179087
+    },
+    "description": [
+      "Boys Hostel for Undergraduate Student"
+    ],
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 12,
+    "name": "Aryabhatta Hostel Block-2",
+    "parent": 8,
+    "superParent": 8,
+    "location": {
+      "latitude": 28.74558396173921,
+      "longitude": 77.1180780093382
+    },
+    "description": [
+      "Boys Hostel for Undergraduate Student"
+    ],
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 13,
+    "name": "Type-II Hostel",
+    "parent": 8,
+    "superParent": 8,
+    "location": {
+      "latitude": 28.7459579,
+      "longitude": 77.1185474
+    },
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 14,
+    "name": "Kids Daycare",
+    "parent": 7,
+    "superParent": 7,
+    "location": {
+      "latitude": 28.7460488,
+      "longitude": 77.1182443
+    },
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 15,
+    "name": "Aryabhatta Mess",
+    "parent": 6,
+    "superParent": 6,
+    "location": {
+      "latitude": 28.7459171,
+      "longitude": 77.118772
+    },
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 16,
+    "name": "Enquiry Office",
+    "parent": 2,
+    "superParent": 2,
+    "location": {
+      "latitude": 28.7463948,
+      "longitude": 77.1188474
+    },
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 17,
+    "name": "Type-III Hostel",
+    "parent": 8,
+    "superParent": 8,
+    "location": {
+      "latitude": 28.7469236,
+      "longitude": 77.118951
+    },
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 18,
+    "name": "Type-V Hostel: Block-2",
+    "parent": 8,
+    "superParent": 8,
+    "location": {
+      "latitude": 28.7471949,
+      "longitude": 77.1197681
+    },
+    "description": [
+      "Flat Number: 15-28"
+    ],
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 19,
+    "name": "Type-V Hostel: Block-1",
+    "parent": 8,
+    "superParent": 8,
+    "location": {
+      "latitude": 28.74774416614134,
+      "longitude": 77.1194530959428
+    },
+    "description": [
+      "Flat Number: 1-14"
+    ],
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 20,
+    "name": "Type-V Hostel: Block-3",
+    "parent": 8,
+    "superParent": 8,
+    "location": {
+      "latitude": 28.74772560502491,
+      "longitude": 77.12017189594279
+    },
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 21,
+    "name": "State Bank of India",
+    "parent": 2,
+    "superParent": 2,
+    "location": {
+      "latitude": 28.747510588574844,
+      "longitude": 77.11964204012483
+    },
+    "description": [
+      "SBI DTU Branch",
+      "ATM"
+    ],
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 22,
+    "name": "Vice Chancellor Residence",
+    "parent": 8,
+    "superParent": 8,
+    "location": {
+      "latitude": 28.7475309,
+      "longitude": 77.1201319
+    },
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 23,
+    "name": "Classrooms",
+    "parent": 1,
+    "superParent": 1,
+    "location": null,
+    "description": null,
+    "nestedList": [
+      {
+        "nestedItemId": 24,
+        "nestedItemName": "SPSs"
+      },
+      {
+        "nestedItemId": 25,
+        "nestedItemName": "Pragya Bhawan"
+      }
+    ],
+    "clickCount": 100
+  },
+  {
+    "id": 24,
+    "name": "SPS",
+    "parent": 23,
+    "superParent": 1,
+    "location": null,
+    "description": null,
+    "nestedList": [
+      {
+        "nestedItemId": 26,
+        "nestedItemName": "SPS 1"
+      },
+      {
+        "nestedItemId": 27,
+        "nestedItemName": "SPS 2"
+      },
+      {
+        "nestedItemId": 28,
+        "nestedItemName": "SPS 3"
+      },
+      {
+        "nestedItemId": 29,
+        "nestedItemName": "SPS 4"
+      },
+      {
+        "nestedItemId": 30,
+        "nestedItemName": "SPS 5"
+      },
+      {
+        "nestedItemId": 31,
+        "nestedItemName": "SPS 6"
+      },
+      {
+        "nestedItemId": 32,
+        "nestedItemName": "SPS 7"
+      },
+      {
+        "nestedItemId": 33,
+        "nestedItemName": "SPS 8"
+      },
+      {
+        "nestedItemId": 34,
+        "nestedItemName": "SPS 9"
+      },
+      {
+        "nestedItemId": 35,
+        "nestedItemName": "SPS 10"
+      },
+      {
+        "nestedItemId": 36,
+        "nestedItemName": "SPS 11"
+      },
+      {
+        "nestedItemId": 37,
+        "nestedItemName": "SPS 12"
+      }
+    ],
+    "clickCount": 100
+  },
+  {
+    "id": 25,
+    "name": "Pragya Bhawan",
+    "parent": 23,
+    "superParent": 1,
+    "location": null,
+    "description": null,
+    "nestedList": [
+      {
+        "nestedItemId": 38,
+        "nestedItemName": "PBGF1"
+      },
+      {
+        "nestedItemId": 39,
+        "nestedItemName": "PBGF2"
+      },
+      {
+        "nestedItemId": 40,
+        "nestedItemName": "PBGF3"
+      },
+      {
+        "nestedItemId": 41,
+        "nestedItemName": "PBGF4"
+      },
+      {
+        "nestedItemId": 42,
+        "nestedItemName": "PBGF5"
+      },
+      {
+        "nestedItemId": 43,
+        "nestedItemName": "PBGF6"
+      },
+      {
+        "nestedItemId": 44,
+        "nestedItemName": "PBFF1"
+      },
+      {
+        "nestedItemId": 45,
+        "nestedItemName": "PBFF2"
+      },
+      {
+        "nestedItemId": 46,
+        "nestedItemName": "PBFF3"
+      },
+      {
+        "nestedItemId": 47,
+        "nestedItemName": "PBFF4"
+      },
+      {
+        "nestedItemId": 48,
+        "nestedItemName": "PBFF5"
+      },
+      {
+        "nestedItemId": 49,
+        "nestedItemName": "PBFF6"
+      }
+    ],
+    "clickCount": 100
+  },
+  {
+    "id": 26,
+    "name": "SPS 1",
+    "parent": 24,
+    "superParent": 1,
+    "location": {
+      "latitude": 28.751483,
+      "longitude": 77.118894
+    },
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 27,
+    "name": "SPS 2",
+    "parent": 24,
+    "superParent": 1,
+    "location": {
+      "latitude": 28.751483,
+      "longitude": 77.118894
+    },
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 28,
+    "name": "SPS 3",
+    "parent": 24,
+    "superParent": 1,
+    "location": {
+      "latitude": 28.7513551,
+      "longitude": 77.1187428
+    },
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 29,
+    "name": "SPS 4",
+    "parent": 24,
+    "superParent": 1,
+    "location": {
+      "latitude": 28.7513551,
+      "longitude": 77.1187428
+    },
+    "description": [
+      "Engineering Graphics (EG) Room"
+    ],
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 30,
+    "name": "SPS 5",
+    "parent": 24,
+    "superParent": 1,
+    "location": {
+      "latitude": 28.7511338,
+      "longitude": 77.1192266
+    },
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 31,
+    "name": "SPS 6",
+    "parent": 24,
+    "superParent": 1,
+    "location": {
+      "latitude": 28.7511338,
+      "longitude": 77.1192266
+    },
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 32,
+    "name": "SPS 7",
+    "parent": 24,
+    "superParent": 1,
+    "location": {
+      "latitude": 28.751068,
+      "longitude": 77.1190738
+    },
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 33,
+    "name": "SPS 8",
+    "parent": 24,
+    "superParent": 1,
+    "location": {
+      "latitude": 28.751068,
+      "longitude": 77.1190738
+    },
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 34,
+    "name": "SPS 9",
+    "parent": 24,
+    "superParent": 1,
+    "location": {
+      "latitude": 28.7494183,
+      "longitude": 77.1200866
+    },
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 35,
+    "name": "SPS 10",
+    "parent": 24,
+    "superParent": 1,
+    "location": {
+      "latitude": 28.7490562,
+      "longitude": 77.1205493
+    },
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 36,
+    "name": "SPS 11",
+    "parent": 24,
+    "superParent": 1,
+    "location": {
+      "latitude": 28.7494615,
+      "longitude": 77.1200357
+    },
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 37,
+    "name": "SPS 12",
+    "parent": 24,
+    "superParent": 1,
+    "location": {
+      "latitude": 28.7494031,
+      "longitude": 77.1202516
+    },
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 38,
+    "name": "PBGF1",
+    "parent": 25,
+    "superParent": 1,
+    "location": {
+      "latitude": 28.7490562,
+      "longitude": 77.1205493
+    },
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 39,
+    "name": "PBGF2",
+    "parent": 25,
+    "superParent": 1,
+    "location": {
+      "latitude": 28.7490562,
+      "longitude": 77.1205493
+    },
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 40,
+    "name": "PBGF3",
+    "parent": 25,
+    "superParent": 1,
+    "location": {
+      "latitude": 28.7490562,
+      "longitude": 77.1205493
+    },
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 44,
+    "name": "PBFF1",
+    "parent": 25,
+    "superParent": 1,
+    "location": {
+      "latitude": 28.7490562,
+      "longitude": 77.1205493
+    },
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 45,
+    "name": "PBFF2",
+    "parent": 25,
+    "superParent": 1,
+    "location": {
+      "latitude": 28.7490562,
+      "longitude": 77.1205493
+    },
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 46,
+    "name": "PBFF3",
+    "parent": 25,
+    "superParent": 1,
+    "location": {
+      "latitude": 28.7490562,
+      "longitude": 77.1205493
+    },
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 41,
+    "name": "PBGF4",
+    "parent": 25,
+    "superParent": 1,
+    "location": {
+      "latitude": 28.7490862,
+      "longitude": 77.1206073
+    },
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 42,
+    "name": "PBGF5",
+    "parent": 25,
+    "superParent": 1,
+    "location": {
+      "latitude": 28.7490862,
+      "longitude": 77.1206073
+    },
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 43,
+    "name": "PBGF6",
+    "parent": 25,
+    "superParent": 1,
+    "location": {
+      "latitude": 28.7490862,
+      "longitude": 77.1206073
+    },
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 47,
+    "name": "PBFF4",
+    "parent": 25,
+    "superParent": 1,
+    "location": {
+      "latitude": 28.7490862,
+      "longitude": 77.1206073
+    },
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 48,
+    "name": "PBFF5",
+    "parent": 25,
+    "superParent": 1,
+    "location": {
+      "latitude": 28.7490862,
+      "longitude": 77.1206073
+    },
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 49,
+    "name": "PBFF6",
+    "parent": 25,
+    "superParent": 1,
+    "location": {
+      "latitude": 28.7490862,
+      "longitude": 77.1206073
+    },
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 50,
+    "name": "Computer Engineering",
+    "parent": 1,
+    "superParent": 1,
+    "location": null,
+    "description": [
+      "AB-4"
+    ],
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 51,
+    "name": "Information Technology",
+    "parent": 1,
+    "superParent": 1,
+    "location": null,
+    "description": [
+      "AB-3"
+    ],
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 52,
+    "name": "Software Engineering",
+    "parent": 1,
+    "superParent": 1,
+    "location": null,
+    "description": [
+      "AB-4"
+    ],
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 53,
+    "name": "Mathematics and Computing Engineering",
+    "parent": 1,
+    "superParent": 1,
+    "location": null,
+    "description": [
+      "AB-3"
+    ],
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 54,
+    "name": "Electrical Engineering",
+    "parent": 1,
+    "superParent": 1,
+    "location": null,
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 55,
+    "name": "Electronics and Communication Engineering",
+    "parent": 1,
+    "superParent": 1,
+    "location": null,
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 56,
+    "name": "Civil Engineering",
+    "parent": 1,
+    "superParent": 1,
+    "location": null,
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 57,
+    "name": "Mechanical Engineering",
+    "parent": 1,
+    "superParent": 1,
+    "location": null,
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 58,
+    "name": "Automotive Engineering",
+    "parent": 1,
+    "superParent": 1,
+    "location": null,
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 59,
+    "name": "Production and Industrial Engineering",
+    "parent": 1,
+    "superParent": 1,
+    "location": null,
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 60,
+    "name": "BioTechnology",
+    "parent": 1,
+    "superParent": 1,
+    "location": null,
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 61,
+    "name": "Environmental Engineering",
+    "parent": 1,
+    "superParent": 1,
+    "location": null,
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 62,
+    "name": "Department of Design",
+    "parent": 1,
+    "superParent": 1,
+    "location": null,
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 63,
+    "name": "Delhi School of Management",
+    "parent": 1,
+    "superParent": 1,
+    "location": null,
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 64,
+    "name": "DTU Library",
+    "parent": 2,
+    "superParent": 2,
+    "location": {
+      "latitude": 28.750806821176777,
+      "longitude": 77.11649823856844
+    },
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 65,
+    "name": "Administrative Block",
+    "parent": 2,
+    "superParent": 2,
+    "location": {
+      "latitude": 28.749733428422477,
+      "longitude": 77.11619002852125
+    },
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 66,
+    "name": "Dr. BR Ambedkar Auditorium",
+    "parent": 3,
+    "superParent": 3,
+    "location": {
+      "latitude": 28.750325246872087,
+      "longitude": 77.11639187687737
+    },
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 67,
+    "name": "Raj Soin Hall",
+    "parent": 3,
+    "superParent": 3,
+    "location": {
+      "latitude": 28.750915530967266,
+      "longitude": 77.11445159896837
+    },
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 68,
+    "name": "Convocation Hall",
+    "parent": 3,
+    "superParent": 3,
+    "location": {
+      "latitude": 28.74937385143597,
+      "longitude": 77.11823358430681
+    },
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 69,
+    "name": "Open Air Theatre",
+    "parent": 4,
+    "superParent": 4,
+    "location": null,
+    "description": [
+      "OAT"
+    ],
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 70,
+    "name": "Wind Point",
+    "parent": 4,
+    "superParent": 4,
+    "location": null,
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 71,
+    "name": "Mini OAT",
+    "parent": 4,
+    "superParent": 4,
+    "location": null,
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 72,
+    "name": "Student Parking",
+    "parent": 5,
+    "superParent": 5,
+    "location": {
+      "latitude": 28.74889354043285,
+      "longitude": 77.11554802244869
+    },
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 73,
+    "name": "Nescafe",
+    "parent": 6,
+    "superParent": 6,
+    "location": null,
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 74,
+    "name": "Mic Mac Canteen",
+    "parent": 6,
+    "superParent": 6,
+    "location": null,
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 75,
+    "name": "Main Canteen",
+    "parent": 6,
+    "superParent": 6,
+    "location": null,
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 76,
+    "name": "Team Defianz-DTUSDC Lab",
+    "parent": 7,
+    "superParent": 7,
+    "location": null,
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 77,
+    "name": "Incubation & Innovation Foundation, DTU",
+    "parent": 6,
+    "superParent": 6,
+    "location": null,
+    "description": [
+      "DTU IIF",
+      "8th Floor",
+      "AB-4 Block"
+    ],
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 78,
+    "name": "Samsung Innovation Campus Lab",
+    "parent": 6,
+    "superParent": 6,
+    "location": null,
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 79,
+    "name": "Indoor Sports Complex",
+    "parent": 9,
+    "superParent": 9,
+    "location": null,
+    "description": [
+      "Badminton",
+      "Billiards",
+      "Chess"
+    ],
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 80,
+    "name": "DTU Gym",
+    "parent": 9,
+    "superParent": 9,
+    "location": null,
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 81,
+    "name": "DTU Lake",
+    "parent": 9,
+    "superParent": 9,
+    "location": null,
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  },
+  {
+    "id": 82,
+    "name": "Pragya Bhawan Cafetaria",
+    "parent": 6,
+    "superParent": 6,
+    "location": {
+      "latitude": 28.7491852,
+      "longitude": 77.120029
+    },
+    "description": null,
+    "nestedList": [],
+    "clickCount": 100
+  }
 ]

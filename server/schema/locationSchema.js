@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
 
-const dbConnection = process.env.DB_CONNECTION;
-mongoose.connect(dbConnection);
+const dbConnection = process.env.DB_CONNECTION_LOCATIONS;
+
+const conn = mongoose.createConnection(dbConnection);
 
 const locationSchema = new mongoose.Schema({
     id: {
@@ -23,36 +24,33 @@ const locationSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    // It's better to use GeoJSON for location data in MongoDB
+
     location: {
-        type: {
-            type: String,
-            enum: ['Point'], // 'location.type' must be 'Point'
-            required: true
+        latitude: {
+            type: Number,
         },
-        coordinates: {
-            type: [Number],
-            required: true
-        }
+        Longitude: {
+            type: Number,
+        },
     },
     description: {
         type: [String],
     },
     nestedList: {
-        type: [new mongoose.Schema({
+        type: [{
             nestedItemId: {
                 type: Number,
             },
             nestedItemName: {
                 type: String,
             },
-        })],
+        }],
     },
     clickCount:{
-        type: Number,        
+        type: Number,    
+        required: true
     },
 });
 
-// It's better to use a more descriptive name for the model
-const Location = mongoose.model('Location', locationSchema);
+const Location = conn.model('Location', locationSchema);
 module.exports = Location;
