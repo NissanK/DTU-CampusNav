@@ -25,7 +25,6 @@ const locationSchema = z.object({
   clickCount: z.number().int(),
 });
 
-
 const addLocation = async (req, res) => {
     try {
         const validatedData = locationSchema.parse(req.body);
@@ -50,7 +49,6 @@ router.post('/addLocation',adminMiddleware, async (req, res) => {
         "message" : "Location added successfully",
     });
 });
-
 
 const multipleLocationSchema = z.array(locationSchema); // schema for multiple locations input
 

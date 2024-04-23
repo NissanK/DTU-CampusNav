@@ -12,6 +12,29 @@ const PORT = 3000;
 
 app.use("/admin", adminRoute);
 
+const Location = require('./schema/locationSchema');
+
+app.get('/location', async (req, res) => {
+    const locationId = req.query.id; 
+    console.log(locationId);
+
+    if (!locationId) {
+        return res.status(400).json({ error: 'Location ID is required' });
+    }
+
+    try {
+        const location = await Location.findOne({ id: locationId });
+
+        if (!location) {
+            return res.status(404).json({ error: 'Location ID not found' });
+        }
+
+        res.json(location);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 })
