@@ -25,26 +25,50 @@ const locationSchema = z.object({
   clickCount: z.number().int(),
 });
 
-router.post('/addLocation',adminMiddleware, async (req, res) => {
-    try{
+
+const addLocation = async (req, res) => {
+    try {
         const validatedData = locationSchema.parse(req.body);
         const location = new Location(validatedData);
         await location.save();
-        res.json({
-            "message" : "Location added successfully",
-            location
-        });
-    }
-    catch(e){
+    } catch (e) {
         if (e.code === 11000 || e.code === 11001) {
             res.status(400).json({
-                "error" : "A location with this ID already exists."
+                "error" : `A location with this ID : ${req.body.id} already exists.`
             });
         } else {
             res.status(400).json({
                 "error" : e.errors
             });
         }
+    }
+}
+
+router.post('/addLocation',adminMiddleware, async (req, res) => {
+    addLocation(req, res);
+    res.json({
+        "message" : "Location added successfully",
+    });
+});
+
+
+const multipleLocationSchema = z.array(locationSchema); // schema for multiple locations input
+
+router.post('/addMultiple',adminMiddleware, async (req, res) => {
+    try{
+        const validatedData = multipleLocationSchema.parse(req.body);
+        const locationSize = validatedData.length;
+        for(var i = 0;i<locationSize;i++){
+            addLocation({body: validatedData[i]}, res);
+        }
+        res.json({
+            "message" : "Locations added successfully",
+        });
+    }
+    catch(e){
+        res.status(400).json({
+            "error" : e.errors
+        });
     }
 });
 
