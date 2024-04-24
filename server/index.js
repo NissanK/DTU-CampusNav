@@ -30,6 +30,8 @@ app.get('/location', async (req, res) => {
         if (!location) {
             return res.status(404).json({ error: 'Location ID not found' });
         }
+            
+        // If the last click was more than 5 second ago, counter++
 
         if (Date.now() - location.lastClicked > 5000) {
             location.clickCount++;
