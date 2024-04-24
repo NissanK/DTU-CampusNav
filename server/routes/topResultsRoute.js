@@ -40,7 +40,7 @@ router.get('/', async (req, res) => {
         const db = client.db('locations');
 
         const data = await db.collection('locations')
-        .find( {name : {$regex : `${searchString}`, $options: 'i'}})
+        .find( {name : {$regex : `\\b${searchString}`, $options: 'i'}})
         .sort({clickCount: -1})
         .limit(10) // check if do i need to limit the responses here or not
         .toArray();
