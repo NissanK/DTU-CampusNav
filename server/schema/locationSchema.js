@@ -50,6 +50,7 @@ const locationSchema = new mongoose.Schema({
         type: Number,    
         required: true
     },
+    lastClicked: { type: Date, default: new Date('1970-01-01') }
 });
 
 const Location = conn.model('Location', locationSchema);
