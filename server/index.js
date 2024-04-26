@@ -10,7 +10,7 @@ const locationRoute = require("./routes/locationRoute")
 
 const app = express();
 
-app.use(cors({ origin: ['https://dtu-campus-nav.vercel.app/','http://localhost:3001'] }));
+app.use(cors({ origin: ['https://dtu-campus-nav.vercel.app','http://localhost:3001'] }));
 app.use(bodyParser.json());
 
 const PORT = process.env.PORT || 3000;
