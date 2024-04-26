@@ -5,7 +5,6 @@ const Location = require('../schema/locationSchema');
 
 router.get('/', async (req, res) => {
     const locationId = req.query.id; 
-    console.log(locationId);
 
     if (!locationId) {
         return res.status(400).json({ error: 'Location ID is required' });

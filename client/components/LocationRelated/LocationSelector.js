@@ -1,6 +1,8 @@
 import {React,useContext,useState,useRef,useEffect} from "react";
 import SelectionButton from "../SelectionButton";
 import LocationDesc from "./LocationDesc";
+import categoryItemsData from '../Categories/CategoryItemsData'
+
 
 import NavigationContext from "../contexts/NavigationContext";
 import LocationSelectorHeightContext from "../contexts/LocationSelectorHeightContext";
@@ -10,7 +12,7 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 function MainPageDiv() {
   
-  const [currentItemID, setCurrentItemID] = useContext(NavigationContext);
+  const [currentItemID,setCurrentItemID,currentSuperParentId,setCurrentSuperParentId] = useContext(NavigationContext);
   const [loading, setLoading] = useState(true);
   const [location, setLocation] = useState({})
     
@@ -68,7 +70,7 @@ function MainPageDiv() {
           : null
         }
         <div className="flex justify-center items-center w-full text-center">
-          {loading ? "Loading..." : location.name}
+          {loading ? "Loading..." : categoryItemsData[location.superParent-1].name}
         </div>
       </div>
 

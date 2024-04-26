@@ -1,48 +1,6 @@
 import React from 'react'
 import CategoryIcons from './CategoryIcons'
-
-const categoryItems = [
-    {
-        id : 1,
-        name : 'Academic Departments',
-        icon : 'Academic'
-    },
-    {
-        id : 2,
-        name : 'Student Services',
-        icon : 'StudentServices'
-    },
-    {
-        id : 3,
-        name : 'Auditoriums',
-        icon : 'Auditoriums'
-    },
-    {
-        id : 4,
-        name : 'Outdoor Spaces',
-        icon : 'Outdoor'
-    },
-    {
-        id : 6,
-        name : 'Food Spots',
-        icon : 'Food'
-    },
-    {
-        id : 8,
-        name : 'Housing Facilities',
-        icon : 'Housing'
-    },
-    {
-        id : 9,
-        name : 'Recreational Spots',
-        icon : 'Recreational'
-    },
-    {
-        id : 7,
-        name : 'Miscellaneous',
-        icon : 'Miscellaneous'
-    },
-]
+import categoryItemsData from './CategoryItemsData'
 
 // 1. Academic Departments
 // 2. Student Services (library, admin, academic window, tnp department, health centre, jac office, civil complaint office something idr will confirm)
@@ -59,7 +17,7 @@ const categoryItems = [
 function CategoryItemsRow() {
   return (
     <div className='flex items-center justify-around mx-2 lg:mx-5 my-4 md:my-7 lg:my-10 flex-wrap'>
-        {categoryItems.map((currItem,index) => (
+        {categoryItemsData.map((currItem,index) => (
             <CategoryIcons category={currItem} key={index}></CategoryIcons>
         ))}
     </div>

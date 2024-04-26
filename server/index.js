@@ -3,10 +3,9 @@ const bodyParser = require('body-parser');
 require('dotenv').config();
 const cors = require('cors');
 
-
 const adminRoute = require("./routes/adminRoute");
 const topResultsRoute = require("./routes/topResultsRoute");
-const locationRoute = require("./routes/locationRoute")
+const locationRoute = require("./routes/locationRoute");
 
 const app = express();
 

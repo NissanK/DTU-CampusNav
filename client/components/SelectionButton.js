@@ -4,32 +4,16 @@ import NavigationContext from './contexts/NavigationContext';
 
 function SelectionButton({item}) {
 
-  const [currentItemID,setCurrentItemID] = useContext(NavigationContext);
+  const [currentItemID,setCurrentItemID,currentSuperParentId,setCurrentSuperParentId] = useContext(NavigationContext);
 
   const handleButtonClick = () => {
     if(item.nestedItemId)
       setCurrentItemID(item.nestedItemId);
-    if(item.id)
+    if(item.id){
       setCurrentItemID(item.id);
+      setCurrentSuperParentId(item.superParent);
+    }
   };
-
-  // const [location, setLocation] = useState({})
-    
-  // useEffect(() => {
-  //     const Backend = process.env.NEXT_PUBLIC_BACKEND;
-  //     const fetchData = async () => {
-  //         try{
-  //           const response = await fetch(`${Backend}/location?id=${id}`);
-  //           const data = await response.json();
-  //           console.log(data);
-  //           setLocation(data);
-  //         }
-  //         catch(error){
-  //           setLocation({});
-  //         }
-  //     }
-  //     fetchData();
-  // }, [])
 
   const linkRef = useRef(null);
 

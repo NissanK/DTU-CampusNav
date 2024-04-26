@@ -19,9 +19,10 @@ router.post('/signin', async (req, res) => {
         username,
         password
     })
+
     if (admin) {
         const token = jwt.sign({
-            username
+            username : username
         }, JWT_SECRET);
 
         res.json({
