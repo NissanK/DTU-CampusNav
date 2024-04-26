@@ -3,7 +3,6 @@ import SelectionButton from "../SelectionButton";
 import LocationDesc from "./LocationDesc";
 import categoryItemsData from '../Categories/CategoryItemsData'
 
-
 import NavigationContext from "../contexts/NavigationContext";
 import LocationSelectorHeightContext from "../contexts/LocationSelectorHeightContext";
 

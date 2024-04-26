@@ -2,6 +2,7 @@ import {React,useState} from 'react'
 import Footer from '../components/Footer'
 import NewMainPageDiv from '../components/NewMainPageDiv'
 import CategoryItemsRow from '../components/Categories/CategoryItemsRow'
+import { Analytics } from "@vercel/analytics/react";
 
 
 import NavigationContext from '../components/contexts/NavigationContext'
