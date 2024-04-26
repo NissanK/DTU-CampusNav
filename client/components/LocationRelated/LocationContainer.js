@@ -29,10 +29,10 @@ function LocationContainer() {
   return (
     <div className='flex lg:flex-row flex-col'>
       <LocationSelectorHeightContext.Provider value={[locationSelectorHeight,setLocationSelectorHeight]}>
-        <LocationSelector></LocationSelector>
+        <LocationSelector/>
         {isMobileDevice ?
-         <PopularLocation></PopularLocation> :
-         <PopularLocationMobile></PopularLocationMobile>
+         <PopularLocation/> :
+         <PopularLocationMobile/>
         }
         
       </LocationSelectorHeightContext.Provider>

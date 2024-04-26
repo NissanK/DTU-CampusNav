@@ -32,7 +32,7 @@ router.get('/', async (req, res) => {
     const searchString = req.query.search;
 
     if(searchString === undefined || searchString === ''){
-        return res.status(400).json({ error: 'Search string is required' });
+        return res.status(200).json([]);
     }
 
     try {
@@ -48,7 +48,7 @@ router.get('/', async (req, res) => {
         res.json(data);
     } catch (error) {
         console.error(error);
-        res.status(500).json({ error: 'An error occurred while fetching top results' });
+        res.status(200).json([]);
     } finally {
         await client.close();
     }

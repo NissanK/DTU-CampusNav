@@ -3,9 +3,6 @@ import React from 'react'
 function MainPageContent() {
   return (
     <>
-        <div className='text-4xl text-center lg:text-left'>
-            Navigating in DTU Made Easy: Your Ultimate Campus Guide
-        </div>
 
         <div className='text-xl text-center lg:text-left'>
             Discover diverse locations at DTU by using the search below or explore by category!

@@ -1,12 +1,35 @@
-import {React,useContext,useEffect,useRef} from 'react'
+import {React,useEffect,useRef,useContext} from 'react'
 import NavigationContext from './contexts/NavigationContext';
 
+
 function SelectionButton({item}) {
+
   const [currentItemID,setCurrentItemID] = useContext(NavigationContext);
 
   const handleButtonClick = () => {
-    setCurrentItemID(item.id);
+    if(item.nestedItemId)
+      setCurrentItemID(item.nestedItemId);
+    if(item.id)
+      setCurrentItemID(item.id);
   };
+
+  // const [location, setLocation] = useState({})
+    
+  // useEffect(() => {
+  //     const Backend = process.env.NEXT_PUBLIC_BACKEND;
+  //     const fetchData = async () => {
+  //         try{
+  //           const response = await fetch(`${Backend}/location?id=${id}`);
+  //           const data = await response.json();
+  //           console.log(data);
+  //           setLocation(data);
+  //         }
+  //         catch(error){
+  //           setLocation({});
+  //         }
+  //     }
+  //     fetchData();
+  // }, [])
 
   const linkRef = useRef(null);
 
@@ -31,7 +54,7 @@ function SelectionButton({item}) {
      px-[0.25rem] py-[0.1rem] rounded-[0.6875rem] flex justify-center overflow-hidden
      items-center gradient-hotspot transition-colors mb-6 md:mb-9 text-[0.8rem] md:text-[1rem] mx-2 cursor-pointer text-center' 
      onClick={handleButtonClick}>
-      {item.name}
+      {item.nestedItemName || item.name}
     </a>
   )
 }

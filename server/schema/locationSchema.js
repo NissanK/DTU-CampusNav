@@ -29,7 +29,7 @@ const locationSchema = new mongoose.Schema({
         latitude: {
             type: Number,
         },
-        Longitude: {
+        longitude: {
             type: Number,
         },
     },

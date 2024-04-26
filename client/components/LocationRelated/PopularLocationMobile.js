@@ -1,14 +1,25 @@
-import {React,} from 'react'
+import {React,useEffect,useState} from 'react'
 import SelectionButton from '../SelectionButton';
 import ClickCount from './ClickCountSmall.js';
-import NavigationItems from '../NavigationItems';
 
 function PopularLocationMobile() {
 
-
-    let sortedNavigationItems = NavigationItems.slice();
-
-    sortedNavigationItems.sort((a, b) => b.clickCount - a.clickCount);
+    const [popularLocations, setPopularLocations] = useState([])
+    
+    useEffect(() => {
+        const Backend = process.env.NEXT_PUBLIC_BACKEND;
+        const fetchData = async () => {
+            try{
+              const response = await fetch(`${Backend}/topResults/all`);
+              const data = await response.json();
+              setPopularLocations(data);
+            }
+            catch(error){
+                setPopularLocations([]);
+            }
+        }
+        fetchData();
+    }, [])
 
     return (
         <div className={`mx-2 my-3 flex flex-col justify-start rounded-[30px] bg-off-blue`}>
@@ -18,12 +29,18 @@ function PopularLocationMobile() {
             </div>
 
             <div className="flex justify-evenly flex-wrap mt-9 md:mt-12">
-                {sortedNavigationItems.slice(0,10).map(currItem => (
+                {popularLocations.map(currItem => (
                     <div className='flex justify-between items-center' key = {currItem.id}>
                         <SelectionButton item = {currItem}></SelectionButton>
                         <ClickCount item={currItem}></ClickCount>
                     </div>
                 ))}
+
+                {popularLocations.length === 0 ?
+                    <div className='text-center text-xl text-background-blue'>Loading...</div> 
+                    : null
+                }
+
             </div>
         </div>
     )
