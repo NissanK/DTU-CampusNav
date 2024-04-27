@@ -1,13 +1,13 @@
 import {React,useContext} from 'react'
 import NavigationContext from '../contexts/NavigationContext';
 
-function CategoryIcons({category}) {
+function CategoryIcons({category,id}) {
 
     const [currentItemID,setCurrentItemID,currentSuperParentId,setCurrentSuperParentId] = useContext(NavigationContext);
 
     const handleClick = () => {
-        setCurrentItemID(category.id);
-        setCurrentSuperParentId(category.id);
+        setCurrentItemID(id);
+        setCurrentSuperParentId(id);
     }
 
     return (

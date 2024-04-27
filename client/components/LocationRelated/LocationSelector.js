@@ -62,14 +62,13 @@ function MainPageDiv() {
       rounded-[30px] bg-off-blue lg:w-2/3 h-fit px-4 md:px-8' 
       ref={LocationSelectorRef}
       >
-
       <div className=" text-background-blue text-2xl md:text-3xl mt-4 md:mt-8 flex items-center">
         {currentItemID !== location.superParent ?
           <FontAwesomeIcon icon={faArrowLeft} className="cursor-pointer absolute" onClick={handleBackClick}/> 
           : null
         }
         <div className="flex justify-center items-center w-full text-center">
-          {loading ? "Loading..." : categoryItemsData[location.superParent-1].name}
+          {loading ? "Loading..." : categoryItemsData[location.superParent].name}
         </div>
       </div>
 
