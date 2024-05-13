@@ -1,14 +1,50 @@
-import React from 'react'
+import {React,useState,useEffect,useContext} from 'react'
 
 import ClickCountLarge from './ClickCountLarge'
 import MapsButton from './MapsButton'
+import NavigationContext from "../contexts/NavigationContext";
 
 function LocationDesc({item}) {
+
+  const [imageUrl, setImageUrl] = useState("");
+  const [currentItemID,setCurrentItemID,currentSuperParentId,setCurrentSuperParentId] = useContext(NavigationContext);
+  
+  const [empty, setEmpty] = useState(true);
+  const [loading,setLoading] = useState(true);
+  
+  const Backend = process.env.NEXT_PUBLIC_BACKEND;
+  
+  useEffect(() => {
+  
+    var newImageUrl;
+  
+    const fetchData = async () => {
+      try{
+        setLoading(true);
+        const response = await fetch(`${Backend}/location/images?id=${currentItemID}`);
+        const data = await response.json();
+        newImageUrl = data.imageUrl;
+        setImageUrl(newImageUrl);
+        setEmpty(false);
+      }
+      catch(error){
+        setEmpty(true);
+      }
+  
+      setLoading(false);
+    }
+  
+    fetchData();
+  }, [])
+
   return (
     <div className='flex justify-between flex-col sm:flex-row-reverse my-8'>
 
       <div className='flex flex-col items-center sm:w-1/2'>
-        <img src='./images/googleMapsPlaceholder.png' className='w-2/3 rounded-2xl'></img>
+        {loading ? "Loading..." : 
+        (empty ? "No Image!" :
+        <img src={imageUrl} className='w-2/3 rounded-2xl'></img>
+        )}
       </div>
 
       <div className='flex flex-col text-background-blue justify-start sm:w-1/2'>

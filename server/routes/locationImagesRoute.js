@@ -44,10 +44,10 @@ router.get('/', async (req, res) => {
     
                     const newImageUrl = await uploadImage(locationId, imageData);
 
-                    res.json({newImageUrl});
+                    res.json(newImageUrl);
                 }
                 catch (error) {
-                    res.status(500).json({ "error": "working theek se nahi ho raha"});
+                    res.status(500).json({ "error": "Some other error occurred while fetching image."});
                 }
             }
             else{

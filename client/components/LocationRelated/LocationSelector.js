@@ -83,6 +83,7 @@ function MainPageDiv() {
         </div>
         :
         loading ? null : 
+        
         <LocationDesc item = {location}></LocationDesc>
       }
 
