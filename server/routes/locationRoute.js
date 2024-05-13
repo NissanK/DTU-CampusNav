@@ -1,7 +1,11 @@
 const { Router } = require('express');
 const router = Router();
 
+const imagesRoute = require('./locationImagesRoute');
+
 const Location = require('../schema/locationSchema');
+
+router.use("/images",imagesRoute)
 
 router.get('/', async (req, res) => {
     const locationId = req.query.id; 

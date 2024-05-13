@@ -1,4 +1,4 @@
-import {React,useContext,useRef,useEffect} from 'react'
+import {React,useContext,useRef} from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import SearchContext from './contexts/SearchContext';

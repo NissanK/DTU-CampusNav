@@ -26,10 +26,10 @@ function NewMainPageDiv() {
     <div className=' relative inline-block'>
         <img src="/images/dtu5.jpg" alt="DTU" className="block w-full h-screen object-[70%] object-cover"></img>
         <div className="absolute top-0 left-0 w-full h-full bg-lightest-blue bg-opacity-[85%] ">
-            <div className='py-20 lg:py-10 flex  mx-2 lg:mx-16 h-screen justify-between'>
+            <div className='py-20 xl:py-10 flex  mx-2 xl:mx-16 h-screen justify-between'>
 
-                <div className='flex flex-col justify-between w-full lg:w-1/2'>
-                  <div className='text-4xl text-center lg:text-left mb-2'>
+                <div className='flex flex-col justify-between w-full xl:w-1/2'>
+                  <div className='text-4xl text-center xl:text-left mb-2'>
                       Navigating in DTU Made Easy: Your Ultimate Campus Guide
                   </div>
                   <SearchContext.Provider value={[searchInput,setSearchInput]}>
@@ -41,7 +41,7 @@ function NewMainPageDiv() {
 
                 </div>
 
-                <img src='/images/navigationMapFront.png' className='hidden lg:block lg:h-[60%] xl:h-[70%]  self-center'></img>
+                <img src='/images/navigationMapFront.png' className='hidden xl:block xl:h-[70%]  self-center'></img>
             </div>
         </div>
     </div>
