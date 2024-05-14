@@ -38,7 +38,7 @@ router.get('/', async (req, res) => {
             if (error.code === 'storage/object-not-found'){
                 try{
 
-                    const imageResponse = `https://maps.googleapis.com/maps/api/staticmap?center=${location.location.latitude},${location.location.longitude}&zoom=20&size=1600x1600&markers=color:red%7Clabel:imdumb%7C${location.location.latitude},${location.location.longitude}&key=${process.env.GOOGLE_MAPS_API_KEY}`;
+                    const imageResponse = `https://maps.googleapis.com/maps/api/staticmap?center=${location.location.latitude},${location.location.longitude}&zoom=18&size=1600x1600&markers=color:red%7Clabel:imdumb%7C${location.location.latitude},${location.location.longitude}&key=${process.env.GOOGLE_MAPS_API_KEY}`;
                     const response = await axios.get(imageResponse, { responseType: 'arraybuffer' });
                     const imageData = response.data;
     
