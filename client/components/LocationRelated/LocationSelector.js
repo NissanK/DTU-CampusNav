@@ -5,6 +5,7 @@ import categoryItemsData from '../Categories/CategoryItemsData'
 
 import NavigationContext from "../contexts/NavigationContext";
 import LocationSelectorHeightContext from "../contexts/LocationSelectorHeightContext";
+import NestedLocationContext from "../contexts/NestedLocationContext";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
@@ -14,7 +15,21 @@ function MainPageDiv() {
   const [currentItemID,setCurrentItemID,currentSuperParentId,setCurrentSuperParentId] = useContext(NavigationContext);
   const [loading, setLoading] = useState(true);
   const [location, setLocation] = useState({})
-    
+  const [isLocationNested,setIsLocationNested] = useContext(NestedLocationContext);
+
+
+  // the below useStates and corresponding useEffect are for conditional rendering
+  const [isNestedListEmpty, setIsNestedListEmpty] = useState(false);
+  const [shouldShowLocationName, setShouldShowLocationName] = useState(false);
+  const [shouldShowSelectionButton, setShouldShowSelectionButton] = useState(false);
+
+  useEffect(() => {
+    setIsNestedListEmpty(location.nestedList && location.nestedList.length === 0);
+    setShouldShowLocationName(location.superParent && categoryItemsData[location.superParent] && location.name !== categoryItemsData[location.superParent].name);
+    setShouldShowSelectionButton(location.location !== null);
+  }, [currentItemID,location,loading]);
+
+
   useEffect(() => {
       const Backend = process.env.NEXT_PUBLIC_BACKEND;
       const fetchData = async () => {
@@ -33,7 +48,10 @@ function MainPageDiv() {
   }, [currentItemID])
 
   const handleBackClick = () => {
-    setCurrentItemID(location.parent);
+    if(isLocationNested){
+      setIsLocationNested(false);
+    }
+    else setCurrentItemID(location.parent);
   }
 
   const LocationSelectorRef = useRef(null);
@@ -55,37 +73,57 @@ function MainPageDiv() {
         resizeObserver.unobserve(LocationSelectorRef.current);
       }
     };
-}, [currentItemID]);
+  }, [currentItemID]);
 
   return (
     <div id="locationSelector" className='flex ml-2 mr-2 lg:ml-8 lg:mr-0 my-3 flex-col
-      rounded-[30px] bg-off-blue lg:w-2/3 h-fit px-4 md:px-8' 
-      ref={LocationSelectorRef}
-      >
-      <div className=" text-background-blue text-2xl md:text-3xl mt-4 md:mt-8 flex items-center">
-        {currentItemID !== location.superParent ?
-          <FontAwesomeIcon icon={faArrowLeft} className="cursor-pointer absolute" onClick={handleBackClick}/> 
+    rounded-[30px] bg-off-blue lg:w-2/3 h-fit px-4 md:px-8 gap-y-4 md:gap-y-8 py-4 md:py-8' 
+    ref={LocationSelectorRef}
+    >
+      
+      <div className=" text-background-blue text-2xl md:text-3xl flex items-center">
+
+        {
+          currentItemID !== location.superParent ?
+            <FontAwesomeIcon icon={faArrowLeft} className="cursor-pointer absolute" onClick={handleBackClick}/> 
           : null
         }
+
         <div className="flex justify-center items-center w-full text-center">
           {loading ? "Loading..." : categoryItemsData[location.superParent].name}
         </div>
+
       </div>
 
-      {location.location === null ?
-        <div className="flex justify-evenly flex-wrap mt-9 md:mt-12">
-          {
-            loading ? null :
-            location.nestedList.map(currItem => (
-              <SelectionButton item = {currItem} key = {currItem.nestedItemId}></SelectionButton>
-            ))
-          }
-        </div>
-        :
-        loading ? null : 
-        
-        <LocationDesc item = {location}></LocationDesc>
-      }
+        <>
+          { !loading && isNestedListEmpty && <LocationDesc item={location} />}
+
+          {isLocationNested && <LocationDesc item={location} />}
+
+          {!isNestedListEmpty && !isLocationNested && (
+            <div className="gap-y-4 md:gap-y-8 flex flex-col">
+
+              {shouldShowLocationName && (
+                <div className="flex justify-center text-xl md:text-2xl">
+                  {location.name}
+                </div>
+              )}
+
+              {shouldShowSelectionButton && (
+                <div className="flex justify-center items-center">
+                  <SelectionButton item={location} />
+                </div>
+              )}
+
+              <div className="flex justify-evenly flex-wrap gap-y-6 md:gap-y-9">
+                {!loading && location.nestedList.map(currItem => (
+                  <SelectionButton item={currItem} key={currItem.nestedItemId} />
+                ))}
+              </div>
+
+            </div>
+          )}
+        </>
 
     </div>
   )

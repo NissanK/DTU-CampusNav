@@ -46,14 +46,14 @@ function TopResults() {
 
   return (
     <section id="topResults" className={`my-3 max-h-[75%] flex flex-col rounded-[30px] 
-      bg-off-blue/50 overflow-y-auto thinScrollbar flex-1`}>
+      bg-off-blue/50 overflow-y-auto thinScrollbar flex-1 gap-y-4 md:gap-y-8 py-4 md:py-8`}>
 
-        <h2 className=" text-background-blue text-2xl md:text-3xl mt-4 md:mt-8
+        <h2 className=" text-background-blue text-2xl md:text-3xl 
         flex text-center mx-auto items-center">
           {loading ? "Loading..." : (empty ? "No Results!" : "Top Results")}
         </h2>
 
-        <div className="flex justify-evenly flex-wrap mt-9 md:mt-12">
+        <div className="flex justify-evenly flex-wrap gap-y-6 md:gap-y-9">
           {
             empty === false ? 
             sortedItems.map(currItem => (

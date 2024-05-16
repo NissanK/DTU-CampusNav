@@ -13,7 +13,7 @@ router.get('/all', async (req, res) => {
         const data = await db.collection('locations')
         .find()
         .sort({clickCount: -1})
-        .limit(10)
+        .limit(15)
         .toArray();
 
         res.json(data);
@@ -39,10 +39,17 @@ router.get('/', async (req, res) => {
         await client.connect();
         const db = client.db('locations');
 
+        const regex = new RegExp(`\\b${searchString}`, 'i');
+
         const data = await db.collection('locations')
-        .find( {name : {$regex : `\\b${searchString}`, $options: 'i'}})
+        .find({
+            $or: [
+                {name : {$regex : regex}},
+                {description : {$in : [regex]}}
+            ]
+        })
         .sort({clickCount: -1})
-        .limit(10) // check if do i need to limit the responses here or not
+        .limit(30) // check if do i need to limit the responses here or not
         .toArray();
 
         res.json(data);

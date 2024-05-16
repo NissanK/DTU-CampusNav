@@ -55,12 +55,15 @@ function LocationDesc({item}) {
             {currItem}
           </div>
         ))}
-        <div className='flex justify-evenly sm:justify-between mt-8'>
+        {
+          loading ? "Loading..." :
+          <div className='flex justify-evenly sm:justify-between mt-8'>
 
-          <ClickCountLarge item = {item}></ClickCountLarge>
-          <MapsButton item = {item}></MapsButton>
+            <ClickCountLarge item = {item}></ClickCountLarge>
+            <MapsButton item = {item}></MapsButton>
 
-        </div>
+          </div>
+        }
       </div>
 
     </div>

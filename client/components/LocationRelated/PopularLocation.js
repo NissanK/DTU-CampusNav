@@ -32,14 +32,15 @@ function PopularLocation() {
 
     return (
         <div className={`my-3 flex flex-col justify-start rounded-l-[30px] bg-off-blue
-        mx-8 overflow-y-auto w-1/3 thinScrollbarColor`}
+        mx-8 overflow-y-auto w-1/3 thinScrollbarColor gap-y-4 md:gap-y-8 py-4 md:py-8`}
             ref = {popularLocationsRef}>
-            <div className=" text-background-blue text-2xl md:text-3xl mt-4 md:mt-8
+
+            <div className=" text-background-blue text-2xl md:text-3xl 
             flex text-center mx-auto items-center">
                 Popular Locations
             </div>
 
-            <div className="flex justify-evenly flex-wrap mt-9 md:mt-12">
+            <div className="flex justify-evenly flex-wrap gap-y-6 md:gap-y-9">
                 {popularLocations.map(currItem => (
                     <div className='flex justify-between items-center' key = {currItem.id}>
                         <SelectionButton item = {currItem}></SelectionButton>
@@ -53,6 +54,7 @@ function PopularLocation() {
                 }
 
             </div>
+            
         </div>
     )
 }

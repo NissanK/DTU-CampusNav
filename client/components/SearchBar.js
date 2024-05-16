@@ -15,6 +15,15 @@ function SearchBar() {
         setSearchInput(searchInputRef.current.value);
     }
 
+    function handleButtonClick(){
+        const inputValue = searchInputRef.current.value.trim();
+        if (inputValue.length < 3) {
+            alert('Please enter at least 3 characters.');
+        } else {
+            setButtonClicked(true);
+        }
+    }
+
     // useEffect(() => {
     //     function anchorSmoothScroll(e){
     //         e.preventDefault();
@@ -42,7 +51,7 @@ function SearchBar() {
                 {/* Implement search button such that when clicked it will scroll up to the searched results  */}
                 
                 <button href={"#topResults"} ref={searchButtonRef}
-                 disabled={searchInput === ""} onClick={() => setButtonClicked(true)}
+                 disabled={searchInput === ""} onClick={() => {handleButtonClick()}}
                  className='absolute right-3 top-1/2 transform -translate-y-1/2
                 text-md bg-bright-blue px-5 rounded-[0.625rem] py-[0.35rem] disabled:opacity-50'>Search</button>
 
