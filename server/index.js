@@ -24,7 +24,7 @@ admin.initializeApp({
   projectId: process.env.FIREBASE_PROJECT_ID
 });
 
-app.post('/generate-token', async (req, res) => {
+app.get('/generate-token', async (req, res) => {
     try {
       const userRecord = await admin.auth().createUser({});
       const uid = userRecord.uid;
