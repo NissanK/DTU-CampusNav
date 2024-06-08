@@ -7,14 +7,39 @@ const adminRoute = require("./routes/adminRoute");
 const topResultsRoute = require("./routes/topResultsRoute");
 const locationRoute = require("./routes/locationRoute");
 const { initialiseFirebase } = require('./libraries/firebase');
+const admin = require('firebase-admin');
+const firebaseServiceAccount = require(process.env.FIREBASE_SERVICE_ACCOUNT_CREDENTIALS_PATH);
 
 
 const app = express();
 
-app.use(cors({ origin: ['https://dtu-campus-nav.vercel.app','http://localhost:3001'] }));
+app.use(cors({ origin: ['https://dtu-campus-nav.vercel.app','http://localhost:3001','http://localhost:3000'] }));
 app.use(bodyParser.json());
 
 const {firebaseStorage} = initialiseFirebase();
+
+admin.initializeApp({
+  credential: admin.credential.cert(firebaseServiceAccount),
+  databaseURL: "https://dtu-campusnavimages.firebaseio.com",
+  projectId: process.env.FIREBASE_PROJECT_ID
+});
+
+app.post('/generate-token', async (req, res) => {
+    try {
+      const userRecord = await admin.auth().createUser({});
+      const uid = userRecord.uid;
+  
+      const customClaims = {
+        apiAccess: true,
+      };
+  
+      const customToken = await admin.auth().createCustomToken(uid, customClaims);
+  
+      res.json({ token: customToken });
+    } catch (error) {
+      res.status(500).send('Error generating token: ' + error);
+    }
+});
 
 app.use((req, res, next) => {
     req.firebaseStorage = firebaseStorage;

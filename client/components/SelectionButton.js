@@ -28,19 +28,19 @@ function SelectionButton({item}) {
   const linkRef = useRef(null);
 
   useEffect(() => {
-      function anchorSmoothScroll(e){
-          e.preventDefault();
-          document.querySelector(this.getAttribute("href")).scrollIntoView({
-              behavior : "smooth"
-          });
-      }
-      linkRef.current.addEventListener("click",anchorSmoothScroll);
-      
-      return () =>{
-          if (linkRef.current !== null) {
-              linkRef.current.RemoveEventListener('click',anchorSmoothScroll);
-          }
-      }
+    function anchorSmoothScroll(e){
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior : "smooth"
+        });
+    }
+    linkRef.current.addEventListener("click",anchorSmoothScroll);
+    
+    return () =>{
+        if (linkRef.current !== null) {
+            linkRef.current.RemoveEventListener('click',anchorSmoothScroll);
+        }
+    }
   }, []);
 
   return (

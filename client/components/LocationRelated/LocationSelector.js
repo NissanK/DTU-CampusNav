@@ -124,7 +124,6 @@ function MainPageDiv() {
             </div>
           )}
         </>
-
     </div>
   )
 }
