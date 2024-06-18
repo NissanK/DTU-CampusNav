@@ -7,28 +7,8 @@ import CategoryItemsRow from '../components/Categories/CategoryItemsRow'
 import NavigationContext from '../components/contexts/NavigationContext'
 import LocationContainer from '../components/LocationRelated/LocationContainer'
 import NestedLocationContext from '../components/contexts/NestedLocationContext'
-import { getAuth, signInWithCustomToken } from 'firebase/auth';
-
-const Backend = process.env.NEXT_PUBLIC_BACKEND;
 
 export default function Home() {
-
-  useEffect(() => {
-    const fetchTokenAndSignIn = async () => {
-      try {
-        const response = await fetch(`${Backend}/generate-token`);
-        console.log(response);
-        const token = response.data.token;
-        const auth = getAuth();
-        const userCredential = await signInWithCustomToken(auth, token);
-        setUser(userCredential.user);
-      } catch (error) {
-        console.error('Error signing in: ', error);
-      }
-    };
-
-    fetchTokenAndSignIn();
-  }, []);
 
   const [currentItemID, setCurrentItemID] = useState(1);
   const [currentSuperParentId, setCurrentSuperParentId] = useState(1);
