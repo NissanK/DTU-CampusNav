@@ -1,28 +1,11 @@
-import {React,useEffect,useState} from 'react'
+import {React,useContext} from 'react'
 import SelectionButton from '../SelectionButton';
+import PopularLocationContext from '../contexts/PopularLocationContext';
 import ClickCount from './ClickCountSmall.js';
 
 function PopularLocationMobile() {
 
-    const [popularLocations, setPopularLocations] = useState([]);
-    const [loading, setLoading] = useState(true);
-    
-    useEffect(() => {
-        const Backend = process.env.NEXT_PUBLIC_BACKEND;
-        const fetchData = async () => {
-            try{
-                setLoading(true);
-                const response = await fetch(`${Backend}/topResults/all`);
-                const data = await response.json();
-                setPopularLocations(data);
-                setLoading(false);
-            }
-            catch(error){
-                setPopularLocations([]);
-            }
-        }
-        fetchData();
-    }, [])
+    const [popularLocations,loading] = useContext(PopularLocationContext);    
 
     return (
         <div className={`mx-2 my-3 flex flex-col justify-start rounded-[30px] bg-off-blue gap-y-4 md:gap-y-8 py-4 md:py-8`}>
