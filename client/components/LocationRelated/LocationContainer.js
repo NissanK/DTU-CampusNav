@@ -27,7 +27,7 @@ function LocationContainer() {
             setPopularLocations(data);
             setTimeout(() => {
               setLoading(false);
-            }, 1000)
+            }, 400)
         }
         catch(error){
             setPopularLocations([]);
