@@ -11,36 +11,36 @@
 
 
 const categoryItemsData = {
-    '1' : {
+    '57240116' : {
         name : 'Academic Departments',
         icon : 'Academic'
     },
-    '2' : {
+    '15699078' : {
         name : 'Student Services',
         icon : 'StudentServices'
     },
-    '3' : {
+    '88618413' : {
         name : 'Auditoriums',
         icon : 'Auditoriums'
     },
-    '4' : {
+    '62637776' : {
         name : 'Outdoor Spaces',
         icon : 'Outdoor'
     },
-    '6' : {
+    '66350266' : {
         name : 'Food Spots',
         icon : 'Food'
     },
-    '7' : {
+    '23773950' : {
         name : 'Miscellaneous',
         icon : 'Miscellaneous'
     },
-    '8' : {
+    '13418771' : {
         name : 'Housing Facilities',
         icon : 'Housing'
     },
-    '9' : {
-        name : 'Recreational Spots',
+    '46172799' : {
+        name : 'Recreational Facilities',
         icon : 'Recreational'
     }
 }

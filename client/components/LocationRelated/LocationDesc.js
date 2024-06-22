@@ -3,11 +3,13 @@ import {React,useState,useEffect,useContext} from 'react'
 import ClickCountLarge from './ClickCountLarge'
 import MapsButton from './MapsButton'
 import NavigationContext from "../contexts/NavigationContext";
+import ViewCountContext from '../contexts/ViewCountContext';
 
 function LocationDesc({item}) {
 
   const [imageUrl, setImageUrl] = useState("");
   const [currentItemID,setCurrentItemID,currentSuperParentId,setCurrentSuperParentId] = useContext(NavigationContext);
+  const [viewCount,setViewCount] = useContext(ViewCountContext);
   
   const [empty, setEmpty] = useState(true);
   const [loading,setLoading] = useState(true);

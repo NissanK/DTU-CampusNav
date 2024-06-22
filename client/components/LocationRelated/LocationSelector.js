@@ -6,16 +6,18 @@ import categoryItemsData from '../Categories/CategoryItemsData'
 import NavigationContext from "../contexts/NavigationContext";
 import LocationSelectorHeightContext from "../contexts/LocationSelectorHeightContext";
 import NestedLocationContext from "../contexts/NestedLocationContext";
+import ViewCountContext from "../contexts/ViewCountContext";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
-function MainPageDiv() {
+function LocationSelector() {
   
   const [currentItemID,setCurrentItemID,currentSuperParentId,setCurrentSuperParentId] = useContext(NavigationContext);
   const [loading, setLoading] = useState(true);
   const [location, setLocation] = useState({})
   const [isLocationNested,setIsLocationNested] = useContext(NestedLocationContext);
+  const [viewCount,setViewCount] = useContext(ViewCountContext);
 
 
   // the below useStates and corresponding useEffect are for conditional rendering
@@ -37,6 +39,7 @@ function MainPageDiv() {
         try{
           const response = await fetch(`${Backend}/location?id=${currentItemID}`);
           const data = await response.json();
+          if(viewCount === 0 && data.id === 57240116) setViewCount(data.clickCount);
           setLocation(data);
         }
         catch(error){
@@ -128,4 +131,4 @@ function MainPageDiv() {
   )
 }
 
-export default MainPageDiv;
+export default LocationSelector;
