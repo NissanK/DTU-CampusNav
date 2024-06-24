@@ -37,7 +37,11 @@ function LocationSelector() {
       const fetchData = async () => {
         setLoading(true);
         try{
-          const response = await fetch(`${Backend}/location?id=${currentItemID}`);
+          const response = await fetch(`${Backend}/location?id=${currentItemID}`, {
+            headers: {
+              'secret': process.env.NEXT_PUBLIC_BACKEND_SECRET,
+            }
+          });
           const data = await response.json();
           if(viewCount === 0 && data.id === 57240116) setViewCount(data.clickCount);
           setLocation(data);

@@ -18,13 +18,17 @@ function PopularLocationMobile() {
             <div className="flex justify-evenly flex-wrap gap-y-6 md:gap-y-9">
                 {
                     loading ? 
-                    <div className='text-center text-xl text-background-blue'>Loading...</div> : 
-                    popularLocations.map(currItem => (
-                        <div className='flex justify-between items-center' key = {currItem.id}>
-                            <SelectionButton item = {currItem}></SelectionButton>
-                            <ClickCount item={currItem}></ClickCount>
+                    <div className='text-center text-xl text-background-blue'>Loading...</div>
+                    : popularLocations.length > 0 ?
+                        popularLocations.map(currItem => (
+                            <div className='flex justify-between items-center' key={currItem.id}>
+                                <SelectionButton item={currItem}></SelectionButton>
+                                <ClickCount item={currItem}></ClickCount>
+                            </div>
+                        ))
+                        : <div className='text-center text-xl'>
+                            Error in displaying most popular locations, Please refresh!
                         </div>
-                    ))
                 }
             </div>
             

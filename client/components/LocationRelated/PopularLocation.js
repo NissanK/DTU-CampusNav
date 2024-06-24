@@ -41,7 +41,6 @@ function PopularLocation() {
                         </div>
                 }
             </div>
-            
         </div>
     )
 }

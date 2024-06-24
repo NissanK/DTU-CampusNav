@@ -21,7 +21,11 @@ function TopResults() {
 
         try{
           setLoading(true);
-          const response = await fetch(`${Backend}/topResults?search=${searchInput}`);
+          const response = await fetch(`${Backend}/topResults?search=${searchInput}`, {
+            headers: {
+              'secret': process.env.NEXT_PUBLIC_BACKEND_SECRET,
+            }
+          });
           const data = await response.json();
           newSortedItems = data;
           if(newSortedItems.length === 0){

@@ -23,7 +23,11 @@ function LocationDesc({item}) {
     const fetchData = async () => {
       try{
         setLoading(true);
-        const response = await fetch(`${Backend}/location/images?id=${currentItemID}`);
+        const response = await fetch(`${Backend}/location/images?id=${currentItemID}`, {
+          headers: {
+            'secret': process.env.NEXT_PUBLIC_BACKEND_SECRET,
+          }
+        });
         const data = await response.json();
         newImageUrl = data.imageUrl;
         setImageUrl(newImageUrl);

@@ -8,32 +8,36 @@ import PopularLocationMobile from './PopularLocationMobile';
 import PopularLocationContext from '../contexts/PopularLocationContext';
 
 function LocationContainer() {
-  
-  const [locationSelectorHeight, setLocationSelectorHeight] = useState(0);
 
+  const [locationSelectorHeight, setLocationSelectorHeight] = useState(0);
+  
   const [isMobileDevice, SetIsMobileDevice] = useState(false);
   const [popularLocations, setPopularLocations] = useState([]);
   const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-
+  const [catchError, setCatchError] = useState(false);
+  const [catchErrorOnce, setCatchErrorOnce] = useState(false);
+  
+  const fetchData = async () => {
     const Backend = process.env.NEXT_PUBLIC_BACKEND;
 
-    const fetchData = async () => {
-        try{
-            setLoading(true);
-            const response = await fetch(`${Backend}/topResults/all`);
-            const data = await response.json();
-            setPopularLocations(data);
-            setTimeout(() => {
-              setLoading(false);
-            }, 400)
+    try{
+      setLoading(true);
+      const response = await fetch(`${Backend}/topResults/all`,{
+        headers: {
+          'secret': process.env.NEXT_PUBLIC_BACKEND_SECRET,
         }
-        catch(error){
-            setPopularLocations([]);
-        }
+      });
+      const data = await response.json();
+      setPopularLocations(data);
+      setLoading(false);
     }
+    catch(error){
+      setCatchError(true);
+      setPopularLocations([]);
+    }
+  }
 
+  useEffect(() => {
     const handleResize = () => {
       const isMobileDevice = window.innerWidth >= 1024;
       SetIsMobileDevice(isMobileDevice);
@@ -47,6 +51,16 @@ function LocationContainer() {
         window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  useEffect(() => {
+
+    if(catchError && !catchErrorOnce){
+      fetchData();
+      setCatchErrorOnce(true);
+      setCatchError(false);
+    }
+
+  }, [catchError]);
 
   return (
     <div className='flex lg:flex-row flex-col'>

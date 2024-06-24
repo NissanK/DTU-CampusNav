@@ -1,9 +1,7 @@
-import {React,useState,useEffect} from 'react'
+import {React,useState} from 'react'
 import Footer from '../components/Footer'
 import NewMainPageDiv from '../components/NewMainPageDiv'
 import CategoryItemsRow from '../components/Categories/CategoryItemsRow'
-
-
 import NavigationContext from '../components/contexts/NavigationContext'
 import LocationContainer from '../components/LocationRelated/LocationContainer'
 import NestedLocationContext from '../components/contexts/NestedLocationContext'
