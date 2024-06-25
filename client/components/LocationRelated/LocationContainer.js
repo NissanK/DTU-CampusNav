@@ -55,12 +55,15 @@ function LocationContainer() {
   useEffect(() => {
 
     if(catchError && !catchErrorOnce){
-      fetchData();
       setCatchErrorOnce(true);
       setCatchError(false);
     }
 
   }, [catchError]);
+
+  useEffect(() => {
+    if(catchErrorOnce) fetchData();
+  }, [catchErrorOnce])
 
   return (
     <div className='flex lg:flex-row flex-col'>
