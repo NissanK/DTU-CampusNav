@@ -52,6 +52,8 @@ function LocationSelector() {
         setLoading(false);
       }
       fetchData();
+      console.log(location.superParent);
+      console.log(location.id);
   }, [currentItemID])
 
   const handleBackClick = () => {
@@ -91,7 +93,8 @@ function LocationSelector() {
       <div className=" text-background-blue text-2xl md:text-3xl flex items-center">
 
         {
-          currentItemID !== location.superParent ?
+          loading ? null :
+          currentItemID !== currentSuperParentId ?
             <FontAwesomeIcon icon={faArrowLeft} className="cursor-pointer absolute" onClick={handleBackClick}/> 
           : null
         }
