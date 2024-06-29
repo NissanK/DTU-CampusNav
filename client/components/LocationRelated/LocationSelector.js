@@ -52,8 +52,6 @@ function LocationSelector() {
         setLoading(false);
       }
       fetchData();
-      console.log(location.superParent);
-      console.log(location.id);
   }, [currentItemID])
 
   const handleBackClick = () => {
