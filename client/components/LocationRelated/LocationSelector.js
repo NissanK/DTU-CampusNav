@@ -60,7 +60,10 @@ function LocationSelector() {
     if(isLocationNested){
       setIsLocationNested(false);
     }
-    else setCurrentItemID(location.parent);
+    else{
+      setCurrentItemID(location.parent);
+      setCurrentSuperParentId(location.superParent);
+    } 
   }
 
   const LocationSelectorRef = useRef(null);
