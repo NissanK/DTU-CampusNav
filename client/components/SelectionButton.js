@@ -45,13 +45,13 @@ function SelectionButton({item}) {
 
   return (
     <a href={"#locationSelector"} ref={linkRef}  className='w-[8rem] sm:w-[12rem] min-h-[2.5rem] min-sm:h-[3rem]
-     px-[0.25rem] py-[0.1rem] rounded-[0.6875rem] flex justify-center overflow-hidden
-     items-center gradient-hotspot transition-colors text-[0.8rem] md:text-[1rem] mx-2 cursor-pointer text-center' 
-     onClick={handleButtonClick}>
-      {currentItemID === item.id 
-      && (!isLocationNested) 
-      && (item.nestedList.length > 0 && item.location !== null)?
-       `${item.name} Location` : item.nestedItemName || item.name}
+      px-[0.25rem] py-[0.1rem] rounded-[0.6875rem] flex justify-center overflow-hidden
+      items-center gradient-hotspot transition-colors text-[0.8rem] md:text-[1rem] mx-2 cursor-pointer text-center' 
+      onClick={handleButtonClick}>
+        {currentItemID === item.id 
+        && (!isLocationNested) 
+        && (item.nestedList.length > 0 && item.location !== null)?
+        `${item.name} Location` : item.nestedItemName || item.name}
     </a>
   )
 }

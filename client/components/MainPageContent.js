@@ -19,7 +19,7 @@ function MainPageContent() {
             </div>
             <img src='/images/navigationMapFront.png' className='lg:hidden w-2/5 mb-[40px] self-start'></img>
             <div className='flex flex-col self-end'>
-                <div className='text-4xl text-bright-blue'>{Math.round(viewCount/100) * 100}<span className='text-background-blue'>+</span></div>
+                <div className='text-4xl text-bright-blue'>{Math.round(viewCount/1000)}K<span className='text-background-blue'>+</span></div>
                 <div className='text-xl'>Visitors</div>
             </div>
         </div>
